@@ -27,18 +27,22 @@ export const PartnersSection = () => {
           </p>
         </motion.div>
 
-        {/* Scrolling Marquee */}
-        <div className="overflow-hidden">
+        {/* Enhanced Scrolling Marquee */}
+        <div className="relative overflow-hidden py-4">
+          {/* Gradient fade effects on sides */}
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10"></div>
+          
           <motion.div
             className="flex space-x-12 items-center"
             animate={{
-              x: [0, -1000],
+              x: [0, -1030],
             }}
             transition={{
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: 20,
+                duration: 25,
                 ease: "linear",
               },
             }}
@@ -46,36 +50,18 @@ export const PartnersSection = () => {
             {[...partners, ...partners].map((partner, index) => (
               <div
                 key={`${partner.name}-${index}`}
-                className="flex-shrink-0 bg-background rounded-lg p-6 shadow-soft hover:shadow-medium transition-shadow duration-300"
+                className="flex-shrink-0 bg-background rounded-xl p-6 shadow-soft transition-all duration-300 border border-border/20"
               >
-                <img
-                  src={partner.logo}
-                  alt={partner.name}
-                  className="h-12 w-auto transition-all duration-300"
-                />
+                <div className="h-16 w-40 flex items-center justify-center">
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="h-12 w-auto max-w-full object-contain"
+                  />
+                </div>
               </div>
             ))}
           </motion.div>
-        </div>
-
-        {/* Static version for better accessibility */}
-        <div className="hidden md:grid grid-cols-2 lg:grid-cols-6 gap-8 mt-8">
-          {partners.map((partner, index) => (
-            <motion.div
-              key={partner.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-background rounded-lg p-6 shadow-soft hover:shadow-medium transition-all duration-300 group"
-            >
-              <img
-                src={partner.logo}
-                alt={partner.name}
-                className="h-12 w-auto mx-auto transition-all duration-300"
-              />
-            </motion.div>
-          ))}
         </div>
       </div>
     </section>

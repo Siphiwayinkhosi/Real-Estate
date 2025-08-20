@@ -6,8 +6,7 @@ import {
   Bed, 
   Bath, 
   Square, 
-  Heart,
-  Eye
+  Heart
 } from "lucide-react";
 import { useState } from "react";
 
@@ -29,6 +28,7 @@ interface PropertyCardProps {
 
 export const PropertyCard = ({ property }: PropertyCardProps) => {
   const [isLiked, setIsLiked] = useState(false);
+  const [showDetails, setShowDetails] = useState(false);
 
   return (
     <motion.div
@@ -71,18 +71,6 @@ export const PropertyCard = ({ property }: PropertyCardProps) => {
             {property.type === "sale" ? "For Sale" : "For Rent"}
           </Badge>
         </div>
-
-        {/* Quick View Button */}
-        <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <Button 
-            size="sm" 
-            variant="secondary"
-            className="w-full bg-white/90 hover:bg-white text-foreground"
-          >
-            <Eye className="mr-2 h-4 w-4" />
-            Quick View
-          </Button>
-        </div>
       </div>
 
       {/* Content */}
@@ -100,27 +88,30 @@ export const PropertyCard = ({ property }: PropertyCardProps) => {
           </div>
         </div>
 
-        {/* Property Details */}
-        <div className="flex items-center justify-between text-sm text-muted-foreground mb-6">
-          <div className="flex items-center">
-            <Bed size={16} className="mr-1" />
-            <span>{property.bedrooms}</span>
+        {/* Toggleable Property Details */}
+        {showDetails && (
+          <div className="grid grid-cols-1 gap-2 text-sm text-muted-foreground mb-6">
+            <div className="flex items-center">
+              <Bed size={16} className="mr-2" />
+              <span>{property.bedrooms} Bedrooms</span>
+            </div>
+            <div className="flex items-center">
+              <Bath size={16} className="mr-2" />
+              <span>{property.bathrooms} Bathrooms</span>
+            </div>
+            <div className="flex items-center">
+              <Square size={16} className="mr-2" />
+              <span>{property.area} Area</span>
+            </div>
           </div>
-          <div className="flex items-center">
-            <Bath size={16} className="mr-1" />
-            <span>{property.bathrooms}</span>
-          </div>
-          <div className="flex items-center">
-            <Square size={16} className="mr-1" />
-            <span>{property.area}</span>
-          </div>
-        </div>
+        )}
 
         {/* View Details Button */}
         <Button 
+          onClick={() => setShowDetails(!showDetails)}
           className="w-full bg-primary hover:bg-primary-light text-primary-foreground font-semibold rounded-lg"
         >
-          View Details
+          {showDetails ? "Hide Details" : "View Details"}
         </Button>
       </div>
     </motion.div>

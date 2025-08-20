@@ -16,39 +16,38 @@ const Partner = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-              <img
-                src={partnerImg}
-                alt="Real Estate Leadership"
-                className="w-full h-auto object-cover"
-              />
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-            </div>
+ <div className="relative h-96 rounded-3xl overflow-hidden shadow-2xl">
+  <img
+    src={partnerImg}
+    alt="Real Estate Leadership"
+    className="w-full h-full object-cover"
+    style={{ objectPosition: "top center" }}
+  />
+  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+</div>
 
-          {/* Decorative green dots - bottom right */}
-<span className="absolute -bottom-8 -right-8">
-  <svg
-    width="93"
-    height="93"
-    viewBox="0 0 93 93"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    {Array.from({ length: 5 }).map((_, row) =>
-      Array.from({ length: 5 }).map((_, col) => (
-        <circle
-          key={`${row}-${col}`}
-          cx={2.5 + col * 22}
-          cy={2.5 + row * 22}
-          r="2.5"
-          fill="#16A34A" // Tailwind green-600
-        />
-      ))
-    )}
-  </svg>
-</span>
-
+            {/* Decorative green dots - bottom right */}
+            <span className="absolute -bottom-8 -right-8">
+              <svg
+                width="93"
+                height="93"
+                viewBox="0 0 93 93"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                {Array.from({ length: 5 }).map((_, row) =>
+                  Array.from({ length: 5 }).map((_, col) => (
+                    <circle
+                      key={`${row}-${col}`}
+                      cx={2.5 + col * 22}
+                      cy={2.5 + row * 22}
+                      r="2.5"
+                      fill="#16A34A" // Tailwind green-600
+                    />
+                  ))
+                )}
+              </svg>
+            </span>
           </motion.div>
 
           {/* Right - Content */}
