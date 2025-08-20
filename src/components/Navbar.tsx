@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Menu, X, Home, Search, Building, Users, Settings, Phone } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "/logo.png";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,15 +27,12 @@ export const Navbar = () => {
   ];
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-medium py-2"
-          : "bg-transparent py-4"
-      }`}
-    >
+   <motion.nav
+  initial={{ y: -100 }}
+  animate={{ y: 0 }}
+  className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md py-4 transition-all duration-300"
+>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}

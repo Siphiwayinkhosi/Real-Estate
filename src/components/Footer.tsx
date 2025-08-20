@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "/logo.png";
 
 export const Footer = () => {
   return (
@@ -9,7 +9,8 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <img src={logo} alt="Kintscher Immobilien" className="h-12 w-auto filter brightness-0 invert" />
+            <img src={logo} alt="Kintscher Immobilien" className="h-12 w-auto" />
+
             <p className="text-primary-foreground/80">
               Your trusted partner in finding the perfect property. With years of experience in the real estate market, we help you make the right investment decisions.
             </p>

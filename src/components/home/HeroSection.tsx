@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Play, ArrowRight } from "lucide-react";
+import { Play, ArrowRight, Home, Key, Building2, DoorOpen } from "lucide-react";
 import { useState } from "react";
 import heroBackground from "@/assets/hero-bg.jpg";
 
@@ -21,7 +21,7 @@ export const HeroSection = () => {
       </motion.div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         
         {/* Left - Text + CTA */}
         <motion.div
@@ -71,40 +71,45 @@ export const HeroSection = () => {
           </div>
         </motion.div>
 
-         {/* Right - Founder Highlight */}
+        {/* Right - Big Icon with Floating Icons */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="relative flex flex-col items-center lg:items-end"
+          className="relative flex items-center justify-center lg:justify-end"
         >
-           {/* Floating Founder Card */}
-           <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="relative w-80 h-96 md:w-96 md:h-[28rem] rounded-lg overflow-hidden shadow-2xl flex items-center justify-center group"
+          {/* Central big house icon */}
+          <motion.div
+            animate={{ scale: [1, 1.05, 1] }}
+            transition={{ duration: 4, repeat: Infinity }}
+            className="text-green-400/90"
           >
-            <motion.img
-              src="/founder.png"
-              alt="Founder"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            {/* Name and Title */}
-            <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-              <h3 className="text-xl md:text-2xl font-semibold text-white">
-                Jane Müller
-              </h3>
-              <p className="text-white/70 text-sm md:text-base">
-                Founder & CEO
-              </p>
-            </div>
-            {/* Hover Quote */}
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              whileHover={{ opacity: 1, y: 0 }}
-              className="absolute bottom-4 text-white/80 italic text-sm md:text-base text-center max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-            >
-              “Every home tells a story, let’s write yours together.”
-            </motion.p>
+            <Home className="w-40 h-40 md:w-56 md:h-56" />
+          </motion.div>
+
+          {/* Floating smaller icons */}
+          <motion.div
+            className="absolute -top-10 left-10 text-white/80"
+            animate={{ y: [0, -15, 0] }}
+            transition={{ duration: 4, repeat: Infinity }}
+          >
+            <Key className="w-10 h-10" />
+          </motion.div>
+
+          <motion.div
+            className="absolute bottom-6 left-20 text-green-300/80"
+            animate={{ y: [0, 15, 0] }}
+            transition={{ duration: 5, repeat: Infinity }}
+          >
+            <Building2 className="w-12 h-12" />
+          </motion.div>
+
+          <motion.div
+            className="absolute top-16 right-12 text-white/70"
+            animate={{ y: [0, -12, 0] }}
+            transition={{ duration: 6, repeat: Infinity }}
+          >
+            <DoorOpen className="w-11 h-11" />
           </motion.div>
         </motion.div>
       </div>
@@ -143,7 +148,7 @@ export const HeroSection = () => {
               ×
             </button>
             <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+              src="/real.mp4"
               title="Promo Video"
               allow="autoplay; fullscreen"
               className="w-full h-full"

@@ -11,7 +11,7 @@ export const TestimonialsSection = () => {
       id: 1,
       name: "Sarah Mueller",
       role: "Property Investor",
-      image: "https://via.placeholder.com/80x80/e6f7ff/0066cc?text=SM",
+    
       content: "Kintscher Immobilien made our dream home a reality. Their expertise in the Berlin market was invaluable, and the entire process was seamless from start to finish.",
       rating: 5
     },
@@ -19,7 +19,7 @@ export const TestimonialsSection = () => {
       id: 2,
       name: "Michael Weber",
       role: "First-time Homebuyer",
-      image: "https://via.placeholder.com/80x80/e6f7ff/0066cc?text=MW",
+     
       content: "As a first-time buyer, I was nervous about the process. The team at Kintscher guided me through every step and found me the perfect apartment in Munich.",
       rating: 5
     },
@@ -27,7 +27,7 @@ export const TestimonialsSection = () => {
       id: 3,
       name: "Anna Schmidt",
       role: "Rental Property Owner",
-      image: "https://via.placeholder.com/80x80/e6f7ff/0066cc?text=AS",
+      
       content: "Their property management services are exceptional. My rental properties are always well-maintained, and they handle everything professionally.",
       rating: 5
     },
@@ -35,7 +35,7 @@ export const TestimonialsSection = () => {
       id: 4,
       name: "Thomas Klein",
       role: "Corporate Relocation",
-      image: "https://via.placeholder.com/80x80/e6f7ff/0066cc?text=TK",
+      
       content: "When our company needed to relocate employees to Hamburg, Kintscher Immobilien provided outstanding support. They found suitable housing for our entire team.",
       rating: 5
     }
@@ -108,8 +108,7 @@ export const TestimonialsSection = () => {
                 {/* Author Info */}
                 <div className="flex items-center justify-center lg:justify-start space-x-4">
                   <img
-                    src={testimonials[currentIndex].image}
-                    alt={testimonials[currentIndex].name}
+                   
                     className="w-12 h-12 rounded-full"
                   />
                   <div>
