@@ -13,11 +13,11 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Get In <span className="text-primary">Touch</span>
+            Nehmen Sie <span className="text-primary">Kontakt auf</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to find your dream property or need expert real estate advice?
-            Contact us today and let our experienced team guide you through your real estate journey.
+            Sie möchten Ihre Traumimmobilie finden oder benötigen fachkundige Beratung im Immobilienbereich?
+            Kontaktieren Sie uns noch heute und lassen Sie sich von unserem erfahrenen Team durch Ihre Immobilienreise begleiten.
           </p>
         </motion.div>
 

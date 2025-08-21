@@ -14,7 +14,7 @@ export const ContactInfo = () => {
             <Phone className="h-6 w-6 text-primary" />
           </div>
           <div>
-            <h3 className="font-semibold">Phone</h3>
+            <h3 className="font-semibold">Telefon</h3>
             <p className="text-muted-foreground">+49 123 456 7890</p>
           </div>
         </div>
@@ -26,7 +26,7 @@ export const ContactInfo = () => {
             <Mail className="h-6 w-6 text-primary" />
           </div>
           <div>
-            <h3 className="font-semibold">Email</h3>
+            <h3 className="font-semibold">E-Mail</h3>
             <p className="text-muted-foreground">info@kintscher-immobilien.de</p>
           </div>
         </div>
@@ -38,8 +38,10 @@ export const ContactInfo = () => {
             <MapPin className="h-6 w-6 text-primary" />
           </div>
           <div>
-            <h3 className="font-semibold">Address</h3>
-            <p className="text-muted-foreground">Musterstraße 123<br />12345 Berlin, Germany</p>
+            <h3 className="font-semibold">Adresse</h3>
+            <p className="text-muted-foreground">
+              Musterstraße 123<br />12345 Berlin, Deutschland
+            </p>
           </div>
         </div>
       </div>
@@ -50,8 +52,10 @@ export const ContactInfo = () => {
             <Clock className="h-6 w-6 text-primary" />
           </div>
           <div>
-            <h3 className="font-semibold">Office Hours</h3>
-            <p className="text-muted-foreground">Mon-Fri: 9AM-6PM<br />Sat: 10AM-4PM</p>
+            <h3 className="font-semibold">Bürozeiten</h3>
+            <p className="text-muted-foreground">
+              Mo-Fr: 09:00-18:00<br />Sa: 10:00-16:00
+            </p>
           </div>
         </div>
       </div>

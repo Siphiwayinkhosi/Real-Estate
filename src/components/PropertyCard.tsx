@@ -68,7 +68,7 @@ export const PropertyCard = ({ property }: PropertyCardProps) => {
             variant={property.type === "sale" ? "default" : "secondary"}
             className="bg-primary/90 text-primary-foreground font-semibold"
           >
-            {property.type === "sale" ? "For Sale" : "For Rent"}
+            {property.type === "sale" ? "Zu Verkaufen" : "Zu Vermieten"}
           </Badge>
         </div>
       </div>
@@ -93,15 +93,15 @@ export const PropertyCard = ({ property }: PropertyCardProps) => {
           <div className="grid grid-cols-1 gap-2 text-sm text-muted-foreground mb-6">
             <div className="flex items-center">
               <Bed size={16} className="mr-2" />
-              <span>{property.bedrooms} Bedrooms</span>
+              <span>{property.bedrooms} Schlafzimmer</span>
             </div>
             <div className="flex items-center">
               <Bath size={16} className="mr-2" />
-              <span>{property.bathrooms} Bathrooms</span>
+              <span>{property.bathrooms} Badezimmer</span>
             </div>
             <div className="flex items-center">
               <Square size={16} className="mr-2" />
-              <span>{property.area} Area</span>
+              <span>{property.area} Wohnfläche</span>
             </div>
           </div>
         )}
@@ -111,7 +111,7 @@ export const PropertyCard = ({ property }: PropertyCardProps) => {
           onClick={() => setShowDetails(!showDetails)}
           className="w-full bg-primary hover:bg-primary-light text-primary-foreground font-semibold rounded-lg"
         >
-          {showDetails ? "Hide Details" : "View Details"}
+          {showDetails ? "Details ausblenden" : "Details anzeigen"}
         </Button>
       </div>
     </motion.div>

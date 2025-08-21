@@ -11,9 +11,9 @@ export const FeaturedProperties = () => {
   const featuredProperties = [
     {
       id: 1,
-      title: "Luxury Modern Villa",
-      price: "€1,250,000",
-      location: "Berlin-Charlottenburg",
+      title: "Luxuriöse moderne Villa",
+      price: "€350,000",
+      location: "Leverkusen",
       image: property1,
       bedrooms: 5,
       bathrooms: 3,
@@ -22,9 +22,9 @@ export const FeaturedProperties = () => {
     },
     {
       id: 2,
-      title: "Contemporary Family Home",
-      price: "€890,000",
-      location: "Munich-Schwabing",
+      title: "Zeitgemäßes Familienhaus",
+      price: "€490,000",
+      location: "Opladen",
       image: property2,
       bedrooms: 4,
       bathrooms: 2,
@@ -34,8 +34,8 @@ export const FeaturedProperties = () => {
     {
       id: 3,
       title: "Premium Penthouse",
-      price: "€2,100,000",
-      location: "Hamburg-Hafencity",
+      price: "€500,000",
+      location: "Burscheid",
       image: property3,
       bedrooms: 3,
       bathrooms: 2,
@@ -55,10 +55,11 @@ export const FeaturedProperties = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Featured <span className="text-primary">Properties</span>
+            Ausgewählte <span className="text-primary">Immobilien</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Discover our handpicked selection of premium properties, carefully chosen for their exceptional quality and investment potential.
+            Entdecken Sie unsere handverlesene Auswahl an Premium-Immobilien, 
+            sorgfältig ausgewählt wegen ihrer außergewöhnlichen Qualität und Investitionsmöglichkeiten.
           </p>
         </motion.div>
 
@@ -88,7 +89,7 @@ export const FeaturedProperties = () => {
               size="lg"
               className="bg-primary hover:bg-primary-light text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl shadow-medium hover:shadow-strong transition-all duration-300 transform hover:scale-105"
             >
-              View All Properties
+              Mehr Immobilien ansehen
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>

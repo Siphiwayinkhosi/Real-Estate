@@ -3,18 +3,18 @@ import { Award, Clock, Users, Shield } from "lucide-react";
 
 export const WhyChooseUsSection = () => {
   const reasons = [
-    { icon: Award, title: "15+ Years Experience", description: "Proven track record in German real estate" },
-    { icon: Clock, title: "24/7 Support", description: "Always available when you need us most" },
-    { icon: Users, title: "Expert Team", description: "Certified professionals with local market knowledge" },
-    { icon: Shield, title: "Trusted Service", description: "98% client satisfaction rate and growing" },
+    { icon: Award, title: "15+ Jahre Erfahrung", description: "Nachweisliche Erfolge im deutschen Immobilienmarkt" },
+    { icon: Clock, title: "24/7 Unterstützung", description: "Immer erreichbar, wenn Sie uns am meisten brauchen" },
+    { icon: Users, title: "Expertenteam", description: "Zertifizierte Fachkräfte mit Kenntnis des lokalen Marktes" },
+    { icon: Shield, title: "Vertrauenswürdiger Service", description: "98% Kundenzufriedenheit und stetig steigend" },
   ];
 
   return (
     <section className="py-16">
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold mb-4">Why Choose Kintscher Immobilien?</h2>
+        <h2 className="text-3xl font-bold mb-4">Warum Kintscher Immobilien wählen?</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          We combine decades of experience with innovative technology to deliver exceptional results
+          Wir verbinden jahrzehntelange Erfahrung mit innovativer Technologie, um herausragende Ergebnisse zu liefern
         </p>
       </div>
 

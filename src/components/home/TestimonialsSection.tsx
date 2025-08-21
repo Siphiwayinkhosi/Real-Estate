@@ -10,33 +10,29 @@ export const TestimonialsSection = () => {
     {
       id: 1,
       name: "Sarah Mueller",
-      role: "Property Investor",
-    
-      content: "Kintscher Immobilien made our dream home a reality. Their expertise in the Berlin market was invaluable, and the entire process was seamless from start to finish.",
+      role: "Immobilieninvestorin",
+      content: "Kintscher Immobilien hat unser Traumhaus Wirklichkeit werden lassen. Ihre Expertise auf dem Berliner Markt war unbezahlbar, und der gesamte Prozess verlief von Anfang bis Ende reibungslos.",
       rating: 5
     },
     {
       id: 2,
       name: "Michael Weber",
-      role: "First-time Homebuyer",
-     
-      content: "As a first-time buyer, I was nervous about the process. The team at Kintscher guided me through every step and found me the perfect apartment in Munich.",
+      role: "Erstkäufer",
+      content: "Als Erstkäufer war ich nervös über den Prozess. Das Team von Kintscher hat mich bei jedem Schritt begleitet und mir die perfekte Wohnung in München gefunden.",
       rating: 5
     },
     {
       id: 3,
       name: "Anna Schmidt",
-      role: "Rental Property Owner",
-      
-      content: "Their property management services are exceptional. My rental properties are always well-maintained, and they handle everything professionally.",
+      role: "Vermieterin",
+      content: "Ihre Immobilienverwaltungsdienste sind außergewöhnlich. Meine Mietobjekte sind stets gut gepflegt, und alles wird professionell gehandhabt.",
       rating: 5
     },
     {
       id: 4,
       name: "Thomas Klein",
-      role: "Corporate Relocation",
-      
-      content: "When our company needed to relocate employees to Hamburg, Kintscher Immobilien provided outstanding support. They found suitable housing for our entire team.",
+      role: "Firmenumzug",
+      content: "Als unser Unternehmen Mitarbeiter nach Hamburg umziehen musste, bot Kintscher Immobilien hervorragende Unterstützung. Sie fanden geeigneten Wohnraum für unser gesamtes Team.",
       rating: 5
     }
   ];
@@ -66,10 +62,10 @@ export const TestimonialsSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            What Our <span className="text-primary">Clients Say</span>
+            Was unsere <span className="text-primary">Kunden sagen</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Don't just take our word for it. Here's what our satisfied clients have to say about their experience with us.
+            Hören Sie nicht nur auf unser Wort. Hier berichten unsere zufriedenen Kunden von ihren Erfahrungen mit uns.
           </p>
         </motion.div>
 
@@ -108,7 +104,6 @@ export const TestimonialsSection = () => {
                 {/* Author Info */}
                 <div className="flex items-center justify-center lg:justify-start space-x-4">
                   <img
-                   
                     className="w-12 h-12 rounded-full"
                   />
                   <div>

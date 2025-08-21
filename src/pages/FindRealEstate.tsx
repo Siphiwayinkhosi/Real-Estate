@@ -2,9 +2,14 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { PropertyCard } from "@/components/PropertyCard";
 import { SearchFilters } from "@/components/SearchFilters";
-import property1 from "@/assets/property1.jpg";
-import property2 from "@/assets/property2.jpg";
-import property3 from "@/assets/property3.jpg";
+
+// Import images (1.jpg → 6.jpg)
+import img1 from "@/assets/1.jpg";
+import img2 from "@/assets/2.jpg";
+import img3 from "@/assets/3.jpg";
+import img4 from "@/assets/4.jpg";
+import img5 from "@/assets/5.jpg";
+import img6 from "@/assets/6.jpg";
 
 const FindRealEstate = () => {
   const [filters, setFilters] = useState({
@@ -16,10 +21,10 @@ const FindRealEstate = () => {
   const properties = [
     {
       id: 1,
-      title: "Luxury Modern Villa",
-      price: "€1,250,000",
-      location: "Berlin-Charlottenburg",
-      image: property1,
+      title: "Luxuriöse Moderne Villa",
+      price: "€550,000",
+      location: "Odenthal",
+      image: img1,
       bedrooms: 5,
       bathrooms: 3,
       area: "350 m²",
@@ -27,10 +32,10 @@ const FindRealEstate = () => {
     },
     {
       id: 2,
-      title: "Contemporary Family Home",
-      price: "€890,000",
-      location: "Munich-Schwabing",
-      image: property2,
+      title: "Zeitgemäßes Familienhaus",
+      price: "€390,000",
+      location: "Wermelskirchen",
+      image: img2,
       bedrooms: 4,
       bathrooms: 2,
       area: "280 m²",
@@ -39,9 +44,9 @@ const FindRealEstate = () => {
     {
       id: 3,
       title: "Premium Penthouse",
-      price: "€2,100,000",
-      location: "Hamburg-Hafencity",
-      image: property3,
+      price: "€400,000",
+      location: "Leichlingen",
+      image: img3,
       bedrooms: 3,
       bathrooms: 2,
       area: "220 m²",
@@ -49,10 +54,10 @@ const FindRealEstate = () => {
     },
     {
       id: 4,
-      title: "Elegant Townhouse",
-      price: "€750,000",
-      location: "Frankfurt-Westend",
-      image: property1,
+      title: "Elegantes Stadthaus",
+      price: "€450,000",
+      location: "Burscheid",
+      image: img4,
       bedrooms: 4,
       bathrooms: 3,
       area: "320 m²",
@@ -60,10 +65,10 @@ const FindRealEstate = () => {
     },
     {
       id: 5,
-      title: "Modern Apartment",
+      title: "Moderne Wohnung",
       price: "€650,000",
-      location: "Cologne-Deutz",
-      image: property2,
+      location: "Leverkusen",
+      image: img5,
       bedrooms: 3,
       bathrooms: 2,
       area: "180 m²",
@@ -71,10 +76,10 @@ const FindRealEstate = () => {
     },
     {
       id: 6,
-      title: "Luxury Estate",
-      price: "€3,200,000",
-      location: "Stuttgart-Degerloch",
-      image: property3,
+      title: "Luxusanwesen",
+      price: "€250,000",
+      location: "Opladen",
+      image: img6,
       bedrooms: 6,
       bathrooms: 4,
       area: "450 m²",
@@ -85,22 +90,26 @@ const FindRealEstate = () => {
   return (
     <div className="min-h-screen pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
           <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Find Your Dream <span className="text-primary">Property</span>
+            Finde Dein Traum-<span className="text-primary">Immobilie</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Discover exceptional properties across Germany's most desirable locations.
-            Our carefully curated selection offers luxury, comfort, and investment potential.
+            Entdecke außergewöhnliche Immobilien an den begehrtesten Standorten Deutschlands.
+            Unsere sorgfältig ausgewählte Auswahl bietet Luxus, Komfort und Investitionspotenzial.
           </p>
         </motion.div>
 
+        {/* Filters */}
         <SearchFilters filters={filters} setFilters={setFilters} />
 
+        {/* Properties Grid */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

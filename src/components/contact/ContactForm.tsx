@@ -11,18 +11,18 @@ export const ContactForm = () => {
       animate={{ opacity: 1, x: 0 }}
       className="bg-card rounded-2xl p-8 shadow-soft"
     >
-      <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
+      <h2 className="text-2xl font-bold mb-6">Senden Sie uns eine Nachricht</h2>
       <form className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Input placeholder="First Name" />
-          <Input placeholder="Last Name" />
+          <Input placeholder="Vorname" />
+          <Input placeholder="Nachname" />
         </div>
-        <Input placeholder="Email Address" type="email" />
-        <Input placeholder="Phone Number" />
-        <Textarea placeholder="Your Message" rows={5} />
+        <Input placeholder="E-Mail-Adresse" type="email" />
+        <Input placeholder="Telefonnummer" />
+        <Textarea placeholder="Ihre Nachricht" rows={5} />
         <Button className="w-full bg-primary hover:bg-primary-light">
           <Send className="mr-2 h-4 w-4" />
-          Send Message
+          Nachricht senden
         </Button>
       </form>
     </motion.div>

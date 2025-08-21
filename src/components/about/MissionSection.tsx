@@ -14,8 +14,10 @@ export const MissionSection = () => {
           <div className="bg-primary/10 rounded-full p-4 w-fit mx-auto mb-6">
             <Target className="h-8 w-8 text-primary" />
           </div>
-          <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
-          <p className="text-muted-foreground">To provide exceptional real estate services that exceed expectations and create lasting relationships with our clients.</p>
+          <h3 className="text-2xl font-bold mb-4">Unsere Mission</h3>
+          <p className="text-muted-foreground">
+            Außergewöhnliche Immobilienservices bieten, die Erwartungen übertreffen und nachhaltige Beziehungen zu unseren Kunden schaffen.
+          </p>
         </motion.div>
         
         <motion.div
@@ -28,8 +30,10 @@ export const MissionSection = () => {
           <div className="bg-primary/10 rounded-full p-4 w-fit mx-auto mb-6">
             <Eye className="h-8 w-8 text-primary" />
           </div>
-          <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
-          <p className="text-muted-foreground">To be Germany's most trusted real estate partner, known for integrity, expertise, and exceptional client service.</p>
+          <h3 className="text-2xl font-bold mb-4">Unsere Vision</h3>
+          <p className="text-muted-foreground">
+            Deutschlands vertrauenswürdigster Immobilienpartner sein, bekannt für Integrität, Fachkompetenz und exzellenten Kundenservice.
+          </p>
         </motion.div>
 
         <motion.div
@@ -42,8 +46,10 @@ export const MissionSection = () => {
           <div className="bg-primary/10 rounded-full p-4 w-fit mx-auto mb-6">
             <Heart className="h-8 w-8 text-primary" />
           </div>
-          <h3 className="text-2xl font-bold mb-4">Our Values</h3>
-          <p className="text-muted-foreground">Integrity, transparency, and dedication to helping our clients find their perfect home or investment opportunity.</p>
+          <h3 className="text-2xl font-bold mb-4">Unsere Werte</h3>
+          <p className="text-muted-foreground">
+            Integrität, Transparenz und Engagement, unseren Kunden dabei zu helfen, ihr perfektes Zuhause oder ihre ideale Investitionsmöglichkeit zu finden.
+          </p>
         </motion.div>
       </div>
     </section>

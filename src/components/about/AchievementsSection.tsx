@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 
 export const AchievementsSection = () => {
   const achievements = [
-    { value: "500+", label: "Properties Sold" },
-    { value: "98%", label: "Client Satisfaction" },
-    { value: "15+", label: "Years Experience" },
-    { value: "€50M+", label: "Total Sales Value" },
+    { value: "500+", label: "Verkaufte Immobilien" },
+    { value: "98%", label: "Kundenzufriedenheit" },
+    { value: "15+", label: "Jahre Erfahrung" },
+    { value: "€50M+", label: "Gesamtverkaufswert" },
   ];
 
   return (

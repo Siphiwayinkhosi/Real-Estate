@@ -3,12 +3,12 @@ import { Home, Key, TrendingUp, Settings, Users, Shield } from "lucide-react";
 
 export const ServicesGrid = () => {
   const services = [
-    { icon: Home, title: "Property Sales", description: "Expert guidance for buying and selling premium properties" },
-    { icon: Key, title: "Property Rentals", description: "Comprehensive rental services for tenants and landlords" },
-    { icon: TrendingUp, title: "Investment Consulting", description: "Strategic advice for real estate investments" },
-    { icon: Settings, title: "Property Management", description: "Professional management of your rental properties" },
-    { icon: Users, title: "Relocation Services", description: "Complete support for corporate and personal relocations" },
-    { icon: Shield, title: "Legal Support", description: "Expert legal guidance throughout all transactions" },
+    { icon: Home, title: "Immobilienverkauf", description: "Professionelle Beratung beim Kauf und Verkauf von Premium-Immobilien" },
+    { icon: Key, title: "Immobilienvermietung", description: "Umfassende Vermietungsservices für Mieter und Vermieter" },
+    { icon: TrendingUp, title: "Investment-Beratung", description: "Strategische Beratung für Immobilieninvestitionen" },
+    { icon: Settings, title: "Property Management", description: "Professionelles Management Ihrer Mietobjekte" },
+    { icon: Users, title: "Umzugsservice", description: "Komplette Unterstützung bei Firmen- und Privatumzügen" },
+    { icon: Shield, title: "Rechtliche Unterstützung", description: "Fachkundige rechtliche Beratung während aller Transaktionen" },
   ];
 
   return (

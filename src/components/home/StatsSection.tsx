@@ -9,10 +9,10 @@ export const StatsSection = () => {
   });
 
   const stats = [
-    { value: 500, label: "Properties Sold", suffix: "+" },
-    { value: 98, label: "Client Satisfaction", suffix: "%" },
-    { value: 15, label: "Years Experience", suffix: "+" },
-    { value: 50, label: "Expert Agents", suffix: "+" },
+    { value: 500, label: "Verkaufle Immobilien", suffix: "+" },
+    { value: 72, label: "Stunden bis zu ihrer immobilien Bewertung", },
+    { value: 15, label: "Jahre Erfahrung", suffix: "+" },
+    { value: 1, label: "Ansprechparterin",  },
   ];
 
   return (
@@ -24,11 +24,12 @@ export const StatsSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Trusted by Thousands of <span className="text-primary">Happy Clients</span>
+            Verwurzelt in Burscheid, aktiv im Rheinisch-Bergischen Land
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Our track record speaks for itself. See why we're Germany's most trusted real estate partner.
-          </p>
+          Verwurzelt in Burscheid, engagiert im gesamten Rheinisch-Bergischen Land-Von Odenthal 
+          uber Wermelskirchen und Opladen bis nach Leichlinglen und Lervekusen. Hier sind wir
+          Zuhause, hier kennen wir den Immobilienmarkt.</p>
         </motion.div>
 
         <div ref={ref} className="grid grid-cols-2 lg:grid-cols-4 gap-8">

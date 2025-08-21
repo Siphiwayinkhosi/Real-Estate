@@ -23,10 +23,10 @@ export const CTASection = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-              Ready to Find Your Dream Property?
+              Bereit, Ihre Traumimmobilie zu finden?
             </h2>
             <p className="text-xl text-primary-foreground/90 mb-8 leading-relaxed">
-              Whether you're looking to buy, sell, or rent, our expert team is here to guide you through every step of your real estate journey. Start exploring our exceptional properties today.
+              Egal, ob Sie kaufen, verkaufen oder mieten möchten – unser Expertenteam begleitet Sie bei jedem Schritt Ihrer Immobilienreise. Entdecken Sie noch heute unsere außergewöhnlichen Immobilien.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -36,7 +36,7 @@ export const CTASection = () => {
                   variant="secondary"
                   className="bg-white text-primary hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-xl shadow-medium hover:shadow-strong transition-all duration-300 transform hover:scale-105"
                 >
-                  Browse Properties
+                  Immobilien durchsuchen
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
@@ -47,7 +47,7 @@ export const CTASection = () => {
                   variant="outline"
                   className="border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg font-semibold rounded-xl backdrop-blur-sm bg-white/10 transition-all duration-300"
                 >
-                  Contact Us
+                  Kontaktieren Sie uns
                   <Phone className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
@@ -68,9 +68,9 @@ export const CTASection = () => {
                   <Phone className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg">Call Us Today</h3>
+                  <h3 className="font-semibold text-lg">Rufen Sie uns an</h3>
                   <p className="text-primary-foreground/80">+49 123 456 7890</p>
-                  <p className="text-sm text-primary-foreground/70">Mon-Fri 9AM-6PM</p>
+                  <p className="text-sm text-primary-foreground/70">Mo-Fr 9:00-18:00</p>
                 </div>
               </div>
             </div>
@@ -81,9 +81,9 @@ export const CTASection = () => {
                   <Mail className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg">Email Us</h3>
+                  <h3 className="font-semibold text-lg">Schreiben Sie uns</h3>
                   <p className="text-primary-foreground/80">info@kintscher-immobilien.de</p>
-                  <p className="text-sm text-primary-foreground/70">We respond within 24 hours</p>
+                  <p className="text-sm text-primary-foreground/70">Wir antworten innerhalb von 24 Stunden</p>
                 </div>
               </div>
             </div>
@@ -95,10 +95,10 @@ export const CTASection = () => {
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
             >
-              <h3 className="font-semibold text-lg mb-2">Free Consultation</h3>
+              <h3 className="font-semibold text-lg mb-2">Kostenlose Beratung</h3>
               <p className="text-primary-foreground/80 text-sm">
-                Schedule a free consultation with our real estate experts. 
-                We'll help you understand the market and find the best opportunities.
+                Vereinbaren Sie eine kostenlose Beratung mit unseren Immobilienexperten. 
+                Wir helfen Ihnen, den Markt zu verstehen und die besten Möglichkeiten zu finden.
               </p>
             </motion.div>
           </motion.div>

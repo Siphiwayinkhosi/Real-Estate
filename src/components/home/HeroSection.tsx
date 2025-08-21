@@ -28,9 +28,9 @@ export const HeroSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
-            Find Your Perfect{" "}
+            Mit Begeisterung für
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-green-500">
-              Dream Home
+              Ihr Zuhause
             </span>
           </h1>
 
@@ -40,8 +40,8 @@ export const HeroSection = () => {
             transition={{ delay: 0.3 }}
             className="mt-6 text-lg md:text-xl text-white/80 max-w-xl mx-auto"
           >
-            Discover exclusive properties across Germany’s most prestigious
-            locations. Luxury living starts with the right choice.
+            und das seit über 30 Jahren. Ihr Immobilienmakler im
+          Rheinish-Bergischen Kreis. Mit Herz & Kompetnz
           </motion.p>
 
           {/* CTA Buttons */}
@@ -51,7 +51,7 @@ export const HeroSection = () => {
                 size="lg"
                 className="bg-green-500 hover:bg-green-400 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:scale-105 transition-transform"
               >
-                Explore Properties
+                Immobilien entdecken
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
@@ -63,7 +63,7 @@ export const HeroSection = () => {
               className="border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 text-lg font-semibold rounded-xl bg-white/10 backdrop-blur-sm transition-all hover:scale-105"
             >
               <Play className="mr-2 h-5 w-5" />
-              Watch Video
+              Jetzt Beratung anfragen
             </Button>
           </div>
         </motion.div>

@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 
 export const TeamSection = () => {
   const team = [
-    { name: "Anka Nett", role: "Accounting", image: "/team1.png" },
+    { name: "Anka Nett", role: "Buchhaltung", image: "/team1.png" },
     { name: "Anna Kappertz", role: "Back Office", image: "/team3.png" },
-    { name: "Peter Kintscher", role: "Real Estate Agent", image: "team2.png" },
+    { name: "Peter Kintscher", role: "Immobilienmakler", image: "/team2.png" },
   ];
 
   return (
     <section className="py-16">
-      <h2 className="text-3xl font-bold text-center mb-12">Meet Our Team</h2>
+      <h2 className="text-3xl font-bold text-center mb-12">Unser Team</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {team.map((member, index) => (
           <motion.div

@@ -8,20 +8,23 @@ const AboutUs = () => {
   return (
     <div className="min-h-screen pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
           <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            About <span className="text-primary">Kintscher Immobilien</span>
+            Über <span className="text-primary">Kintscher Immobilien</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            With over two decades of experience in the German real estate market,
-            we are your trusted partner for exceptional property solutions.
+            Mit über zwei Jahrzehnten Erfahrung auf dem deutschen Immobilienmarkt
+            sind wir Ihr vertrauenswürdiger Partner für außergewöhnliche
+            Immobilienlösungen.
           </p>
         </motion.div>
 
+        {/* Sections */}
         <MissionSection />
         <AchievementsSection />
         <TimelineSection />

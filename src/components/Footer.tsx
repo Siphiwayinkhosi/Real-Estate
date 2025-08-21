@@ -7,7 +7,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-3">Contact Info</h3>
+            <h3 className="text-lg font-semibold mb-3">Kontaktinformationen</h3>
             <div className="space-y-2">
               <div className="flex items-center gap-2">
                 <Phone size={18} />
@@ -30,7 +30,7 @@ export const Footer = () => {
           {/* Socials */}
           <div className="flex flex-col justify-end lg:items-end">
             <div>
-              <h3 className="text-lg font-semibold mb-3">Follow Us</h3>
+              <h3 className="text-lg font-semibold mb-3">Folgen Sie uns</h3>
               <div className="flex gap-4 lg:justify-end">
                 <a
                   href="https://www.facebook.com/kintscherimmobilien"
@@ -72,7 +72,7 @@ export const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-primary-foreground/20 mt-8 pt-6 text-center">
           <p className="text-primary-foreground/60 text-sm">
-            © {new Date().getFullYear()} Kintscher Immobilien GmbH. All rights reserved.
+            © {new Date().getFullYear()} Kintscher Immobilien GmbH. Alle Rechte vorbehalten.
           </p>
         </div>
       </div>

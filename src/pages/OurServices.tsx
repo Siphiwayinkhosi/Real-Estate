@@ -13,11 +13,11 @@ const OurServices = () => {
           className="text-center mb-16"
         >
           <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Our <span className="text-primary">Services</span>
+            Unsere <span className="text-primary">Dienstleistungen</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive real estate solutions tailored to your needs.
-            From buying and selling to property management, we provide expert guidance every step of the way.
+            Umfassende Immobilienlösungen, individuell auf Ihre Bedürfnisse zugeschnitten. 
+            Vom Kauf und Verkauf bis hin zur Immobilienverwaltung bieten wir fachkundige Beratung in jedem Schritt.
           </p>
         </motion.div>
 

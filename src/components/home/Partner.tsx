@@ -16,15 +16,15 @@ const Partner = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
           >
- <div className="relative h-96 rounded-3xl overflow-hidden shadow-2xl">
-  <img
-    src={partnerImg}
-    alt="Real Estate Leadership"
-    className="w-full h-full object-cover"
-    style={{ objectPosition: "top center" }}
-  />
-  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-</div>
+            <div className="relative h-[36rem] rounded-3xl overflow-hidden shadow-2xl">
+              <img
+                src={partnerImg}
+                alt="Führung im Immobilienbereich"
+                className="w-full h-full object-cover"
+                style={{ objectPosition: "top center" }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+            </div>
 
             {/* Decorative green dots - bottom right */}
             <span className="absolute -bottom-8 -right-8">
@@ -42,7 +42,7 @@ const Partner = () => {
                       cx={2.5 + col * 22}
                       cy={2.5 + row * 22}
                       r="2.5"
-                      fill="#16A34A" // Tailwind green-600
+                      fill="#16A34A"
                     />
                   ))
                 )}
@@ -59,34 +59,46 @@ const Partner = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
-              Shaping the Future of{" "}
+              Persönlich für Sie da:{" "}
               <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
-                Real Estate
-              </span>
+                MELANIE WOLLTHAN
+              </span> Immobilienmaklerin
             </h2>
 
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              With a clear vision and passion for excellence, we redefine the real estate experience. 
-              Our approach goes beyond transactions — it’s about creating lasting connections, building trust, and delivering homes that inspire.
+            <p className="text-lg text-gray-700 leading-relaxed mb-2">
+              Wir nehmen uns Zeit für Ihre Fragen und beraten Sie individuell — 
+              transparent, ehrlich und verlässlich. Vereinbaren Sie noch heute ein Gespräch.
             </p>
+
+         <p className="text-3xl text-gray-900 font-bold mb-6">
+  <a href="tel:+492174785796" className="hover:underline">
+    "CTA" +49 2174 78 57 96
+  </a>
+</p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
               <motion.div whileHover={{ scale: 1.05 }} className="flex flex-col items-center text-center">
                 <Home className="h-10 w-10 text-green-600 mb-3" />
-                <p className="text-gray-800 font-semibold">Dream Homes</p>
-                <span className="text-sm text-gray-600">Helping families find a place they truly belong.</span>
+                <p className="text-gray-800 font-semibold">Traumhäuser</p>
+                <span className="text-sm text-gray-600">
+                  Wir helfen Familien, ein Zuhause zu finden, in dem sie wirklich dazugehören.
+                </span>
               </motion.div>
 
               <motion.div whileHover={{ scale: 1.05 }} className="flex flex-col items-center text-center">
                 <Building2 className="h-10 w-10 text-green-600 mb-3" />
-                <p className="text-gray-800 font-semibold">Urban Living</p>
-                <span className="text-sm text-gray-600">Modern apartments in thriving cityscapes.</span>
+                <p className="text-gray-800 font-semibold">Städtisches Wohnen</p>
+                <span className="text-sm text-gray-600">
+                  Moderne Apartments in pulsierenden Stadtvierteln.
+                </span>
               </motion.div>
 
               <motion.div whileHover={{ scale: 1.05 }} className="flex flex-col items-center text-center">
                 <KeyRound className="h-10 w-10 text-green-600 mb-3" />
-                <p className="text-gray-800 font-semibold">Smart Investments</p>
-                <span className="text-sm text-gray-600">Securing properties with long-term value.</span>
+                <p className="text-gray-800 font-semibold">Smarte Investitionen</p>
+                <span className="text-sm text-gray-600">
+                  Absicherung von Immobilien mit langfristigem Wert.
+                </span>
               </motion.div>
             </div>
           </motion.div>
@@ -97,4 +109,5 @@ const Partner = () => {
 };
 
 export default Partner;
+
 

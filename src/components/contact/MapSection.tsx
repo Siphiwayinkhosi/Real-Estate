@@ -7,11 +7,11 @@ export const MapSection = () => {
       animate={{ opacity: 1, y: 0 }}
       className="bg-card rounded-2xl p-8 shadow-soft"
     >
-      <h2 className="text-2xl font-bold mb-6 text-center">Find Us</h2>
+      <h2 className="text-2xl font-bold mb-6 text-center">Finden Sie uns</h2>
       <div className="bg-muted rounded-xl h-96 flex items-center justify-center">
         <div className="text-center text-muted-foreground">
-          <div className="text-lg font-semibold mb-2">Interactive Map</div>
-          <p>Google Maps integration would be placed here</p>
+          <div className="text-lg font-semibold mb-2">Interaktive Karte</div>
+          <p>Hier würde die Google Maps-Integration eingebunden werden</p>
           <p className="text-sm mt-2">Musterstraße 123, 12345 Berlin</p>
         </div>
       </div>

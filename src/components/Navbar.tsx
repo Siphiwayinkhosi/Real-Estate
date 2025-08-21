@@ -18,21 +18,20 @@ export const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: "Home", path: "/", icon: Home },
-    { name: "Find Real Estate", path: "/find-real-estate", icon: Search },
-    { name: "Rental Properties", path: "/rental-properties", icon: Building },
-    { name: "About Us", path: "/about-us", icon: Users },
-    { name: "Our Services", path: "/our-services", icon: Settings },
-    { name: "Contact", path: "/contact", icon: Phone },
+    { name: "Startseite", path: "/", icon: Home },
+    { name: "Immobilien Finden", path: "/find-real-estate", icon: Search },
+    { name: "Mietobjekte", path: "/rental-properties", icon: Building },
+    { name: "Über Uns", path: "/about-us", icon: Users },
+    { name: "Unsere Dienstleistungen", path: "/our-services", icon: Settings },
+    { name: "Kontakt", path: "/contact", icon: Phone },
   ];
 
   return (
    <motion.nav
-  initial={{ y: -100 }}
-  animate={{ y: 0 }}
-  className="fixed top-0 left-0 right-0 z-50 bg-white/30 backdrop-blur-md py-4 transition-all duration-300"
->
-
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      className="fixed top-0 left-0 right-0 z-50 bg-white/30 backdrop-blur-md py-4 transition-all duration-300"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
