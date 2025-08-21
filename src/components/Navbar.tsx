@@ -1,32 +1,25 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Menu, X, Home, Search, Building, Users, Settings, Phone } from "lucide-react";
+import { Menu, X, Home, Search, Users, Settings, Phone } from "lucide-react";
 import logo from "/logo.png";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isOverHero, setIsOverHero] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
-    const hero = document.getElementById("hero");
-
     const handleScroll = () => {
-      if (!hero) return;
-      const heroBottom = hero.getBoundingClientRect().bottom;
-      setIsOverHero(heroBottom > 0); // true if still over hero
+      setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // initial check
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navItems = [
-    { name: "Startseite", path: "/", icon: Home },
+    { name: "Home", path: "/", icon: Home },
     { name: "Immobilien Finden", path: "/find-real-estate", icon: Search },
-    { name: "Mietobjekte", path: "/rental-properties", icon: Building },
     { name: "Über Uns", path: "/about-us", icon: Users },
     { name: "Unsere Dienstleistungen", path: "/our-services", icon: Settings },
     { name: "Kontakt", path: "/contact", icon: Phone },
@@ -36,34 +29,30 @@ export const Navbar = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-white/30 backdrop-blur-md py-4 transition-all duration-500"
+      className={`fixed top-0 left-0 right-0 z-50 bg-white/30 backdrop-blur-md transition-all duration-300 ${
+        isScrolled ? "shadow-md py-3" : "py-4"
+      }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div
-              className={`transition-all duration-500 rounded-xl px-3 py-1 ${
-                isOverHero ? "bg-white/70 shadow-md" : "bg-transparent"
-              }`}
-            >
-              <img
-                src={logo}
-                alt="Kintscher Immobilien"
-                className="h-12 w-auto"
-              />
-            </div>
+          <Link to="/" className="flex items-center">
+            <img
+              src={logo}
+              alt="Kintscher Immobilien"
+              className="h-12 w-auto"
+            />
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          {/* Centered Navigation (from md up) */}
+          <div className="hidden md:flex flex-1 justify-center items-center gap-x-8">
             {navItems.map((item) => {
               const isActive = location.pathname === item.path;
               return (
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`relative px-4 py-2 rounded-lg transition-all duration-300 hover:bg-primary/10 ${
+                  className={`relative px-3 py-2 rounded-lg transition-all duration-300 hover:bg-primary/10 ${
                     isActive
                       ? "text-primary font-semibold"
                       : "text-foreground hover:text-primary"
@@ -85,7 +74,7 @@ export const Navbar = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+            className="md:hidden p-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/10 transition-colors"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -99,7 +88,7 @@ export const Navbar = () => {
             height: isOpen ? "auto" : 0,
           }}
           transition={{ duration: 0.3 }}
-          className="lg:hidden overflow-hidden"
+          className="md:hidden overflow-hidden"
         >
           <div className="py-4 space-y-2">
             {navItems.map((item) => {

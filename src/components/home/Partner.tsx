@@ -16,7 +16,7 @@ const Partner = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <div className="relative h-[42rem] rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative h-[36rem] rounded-3xl overflow-hidden shadow-2xl">
               <img
                 src={partnerImg}
                 alt="Führung im Immobilienbereich"
@@ -61,7 +61,7 @@ const Partner = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
               Persönlich für Sie da:{" "}
               <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
-                MELANIE WOLLTHAN
+                Melanie Wollthan
               </span> Immobilienmaklerin
             </h2>
 
@@ -87,7 +87,7 @@ const Partner = () => {
     <p className="text-gray-800 font-semibold">Haus kaufen</p>
     <span className="text-sm text-gray-600 leading-relaxed">
       Ihr neues Zuhause mit Kintscher Immobilien. <br />
-      Sie möchten ein Haus kaufen? Wir helfen Familien dabei, ihr perfektes Zuhause in Burscheid und dem Rheinisch-Bergischen Kreis zu finden.
+      
     </span>
   </motion.div>
 
@@ -98,21 +98,22 @@ const Partner = () => {
     <Building2 className="h-10 w-10 text-green-600 mb-3" />
     <p className="text-gray-800 font-semibold">Städtisches Wohnen</p>
     <span className="text-sm text-gray-600 leading-relaxed">
-      Finden – Ihr neues Zuhause mit Kintscher Immobilien. <br />
-      Sie möchten eine Wohnung finden? Wir unterstützen Sie dabei, die passende Wohnung zu entdecken – individuell, zuverlässig und mit langjähriger Marktkenntnis.
+       
+      Sie möchten eine Wohnung finden? Wir unterstützen Sie dabei.
     </span>
   </motion.div>
 
-  <motion.div 
-    whileHover={{ scale: 1.05 }} 
-    className="flex flex-col items-start text-left p-4"
-  >
-    <KeyRound className="h-10 w-10 text-green-600 mb-3" />
-    <p className="text-gray-800 font-semibold">Smarte Investitionen</p>
-    <span className="text-sm text-gray-600 leading-relaxed">
-      Absicherung von Immobilien mit langfristigem Wert.
-    </span>
-  </motion.div>
+<motion.div 
+  whileHover={{ scale: 1.05 }} 
+  className="inline-block align-top flex flex-col items-start text-left p-4"
+>
+  <KeyRound className="h-10 w-10 text-green-600 mb-3" />
+  <p className="text-gray-800 font-semibold whitespace-nowrap">Smarte Investitionen</p>
+  <span className="text-sm text-gray-600 leading-relaxed">
+    Absicherung von Immobilien mit langfristigem Wert.
+  </span>
+</motion.div>
+
 </div>
 
           </motion.div>

@@ -1,13 +1,10 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Play, ArrowRight } from "lucide-react";
-import { useState } from "react";
+import { ArrowRight } from "lucide-react";
 import heroBackground from "@/assets/hero-bg.jpg";
 
 export const HeroSection = () => {
-  const [showVideo, setShowVideo] = useState(false);
-
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Background with slow zoom */}
@@ -40,8 +37,8 @@ export const HeroSection = () => {
             transition={{ delay: 0.3 }}
             className="mt-6 text-lg md:text-xl text-white/80 max-w-xl mx-auto"
           >
-            und das seit über 30 Jahren. Ihr Immobilienmakler im
-          Rheinish-Bergischen Kreis. Mit Herz & Kompetnz
+            Und das seit über 30 Jahren.<br /> Ihr Immobilienmakler im
+            Rheinisch-Bergischen Kreis.<br /> Mit Herz & Kompetenz
           </motion.p>
 
           {/* CTA Buttons */}
@@ -56,47 +53,19 @@ export const HeroSection = () => {
               </Button>
             </Link>
 
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={() => setShowVideo(true)}
-              className="border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 text-lg font-semibold rounded-xl bg-white/10 backdrop-blur-sm transition-all hover:scale-105"
-            >
-              <Play className="mr-2 h-5 w-5" />
-              Jetzt Beratung anfragen
-            </Button>
+            <Link to="/contact">
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 text-lg font-semibold rounded-xl bg-white/10 backdrop-blur-sm transition-all hover:scale-105"
+              >
+                Jetzt Beratung anfragen
+              </Button>
+            </Link>
           </div>
         </motion.div>
       </div>
-
-      {/* Video Modal */}
-      {showVideo && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
-          onClick={() => setShowVideo(false)}
-        >
-          <motion.div
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            className="relative bg-black rounded-2xl overflow-hidden max-w-4xl w-full aspect-video shadow-2xl border border-white/20"
-          >
-            <button
-              onClick={() => setShowVideo(false)}
-              className="absolute top-4 right-4 z-10 bg-white/20 hover:bg-white/30 rounded-full p-2 text-white transition"
-            >
-              ×
-            </button>
-            <iframe
-              src="/real.mp4"
-              title="Promo Video"
-              allow="autoplay; fullscreen"
-              className="w-full h-full"
-            />
-          </motion.div>
-        </motion.div>
-      )}
     </div>
   );
 };
+
