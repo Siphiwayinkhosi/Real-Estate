@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ServicesGrid } from "@/components/services/ServicesGrid";
 import { ProcessSection } from "@/components/services/ProcessSection";
-import { WhyChooseUsSection } from "@/components/services/WhyChooseUsSection";
+
 
 const OurServices = () => {
   return (
@@ -23,7 +23,7 @@ const OurServices = () => {
 
         <ServicesGrid />
         <ProcessSection />
-        <WhyChooseUsSection />
+        
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Home, Building2, KeyRound } from "lucide-react"; // icons
+import { Home, Building2, KeyRound, Phone } from "lucide-react"; // icons
 import partnerImg from "@/assets/founder.png";
 
 const Partner = () => {
@@ -16,7 +16,7 @@ const Partner = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <div className="relative h-[36rem] rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative h-[42rem] rounded-3xl overflow-hidden shadow-2xl">
               <img
                 src={partnerImg}
                 alt="Führung im Immobilienbereich"
@@ -70,37 +70,51 @@ const Partner = () => {
               transparent, ehrlich und verlässlich. Vereinbaren Sie noch heute ein Gespräch.
             </p>
 
-         <p className="text-3xl text-gray-900 font-bold mb-6">
-  <a href="tel:+492174785796" className="hover:underline">
-    "CTA" +49 2174 78 57 96
-  </a>
-</p>
+  <a
+  href="tel:+492174785796"
+  className="inline-flex items-center gap-2 bg-green-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-green-700 transition-colors"
+>
+  <Phone className="h-5 w-5" />
+  Jetzt Beratung anfragen
+</a>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
-              <motion.div whileHover={{ scale: 1.05 }} className="flex flex-col items-center text-center">
-                <Home className="h-10 w-10 text-green-600 mb-3" />
-                <p className="text-gray-800 font-semibold">Traumhäuser</p>
-                <span className="text-sm text-gray-600">
-                  Wir helfen Familien, ein Zuhause zu finden, in dem sie wirklich dazugehören.
-                </span>
-              </motion.div>
+<div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
+  <motion.div 
+    whileHover={{ scale: 1.05 }} 
+    className="flex flex-col items-start text-left p-4"
+  >
+    <Home className="h-10 w-10 text-green-600 mb-3" />
+    <p className="text-gray-800 font-semibold">Haus kaufen</p>
+    <span className="text-sm text-gray-600 leading-relaxed">
+      Ihr neues Zuhause mit Kintscher Immobilien. <br />
+      Sie möchten ein Haus kaufen? Wir helfen Familien dabei, ihr perfektes Zuhause in Burscheid und dem Rheinisch-Bergischen Kreis zu finden.
+    </span>
+  </motion.div>
 
-              <motion.div whileHover={{ scale: 1.05 }} className="flex flex-col items-center text-center">
-                <Building2 className="h-10 w-10 text-green-600 mb-3" />
-                <p className="text-gray-800 font-semibold">Städtisches Wohnen</p>
-                <span className="text-sm text-gray-600">
-                  Moderne Apartments in pulsierenden Stadtvierteln.
-                </span>
-              </motion.div>
+  <motion.div 
+    whileHover={{ scale: 1.05 }} 
+    className="flex flex-col items-start text-left p-4"
+  >
+    <Building2 className="h-10 w-10 text-green-600 mb-3" />
+    <p className="text-gray-800 font-semibold">Städtisches Wohnen</p>
+    <span className="text-sm text-gray-600 leading-relaxed">
+      Finden – Ihr neues Zuhause mit Kintscher Immobilien. <br />
+      Sie möchten eine Wohnung finden? Wir unterstützen Sie dabei, die passende Wohnung zu entdecken – individuell, zuverlässig und mit langjähriger Marktkenntnis.
+    </span>
+  </motion.div>
 
-              <motion.div whileHover={{ scale: 1.05 }} className="flex flex-col items-center text-center">
-                <KeyRound className="h-10 w-10 text-green-600 mb-3" />
-                <p className="text-gray-800 font-semibold">Smarte Investitionen</p>
-                <span className="text-sm text-gray-600">
-                  Absicherung von Immobilien mit langfristigem Wert.
-                </span>
-              </motion.div>
-            </div>
+  <motion.div 
+    whileHover={{ scale: 1.05 }} 
+    className="flex flex-col items-start text-left p-4"
+  >
+    <KeyRound className="h-10 w-10 text-green-600 mb-3" />
+    <p className="text-gray-800 font-semibold">Smarte Investitionen</p>
+    <span className="text-sm text-gray-600 leading-relaxed">
+      Absicherung von Immobilien mit langfristigem Wert.
+    </span>
+  </motion.div>
+</div>
+
           </motion.div>
         </div>
       </div>

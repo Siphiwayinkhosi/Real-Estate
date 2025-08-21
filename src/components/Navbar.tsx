@@ -6,14 +6,20 @@ import logo from "/logo.png";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isOverHero, setIsOverHero] = useState(true);
   const location = useLocation();
 
   useEffect(() => {
+    const hero = document.getElementById("hero");
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      if (!hero) return;
+      const heroBottom = hero.getBoundingClientRect().bottom;
+      setIsOverHero(heroBottom > 0); // true if still over hero
     };
+
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // initial check
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -27,16 +33,26 @@ export const Navbar = () => {
   ];
 
   return (
-   <motion.nav
+    <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-white/30 backdrop-blur-md py-4 transition-all duration-300"
+      className="fixed top-0 left-0 right-0 z-50 bg-white/30 backdrop-blur-md py-4 transition-all duration-500"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <img src={logo} alt="Kintscher Immobilien" className="h-12 w-auto" />
+            <div
+              className={`transition-all duration-500 rounded-xl px-3 py-1 ${
+                isOverHero ? "bg-white/70 shadow-md" : "bg-transparent"
+              }`}
+            >
+              <img
+                src={logo}
+                alt="Kintscher Immobilien"
+                className="h-12 w-auto"
+              />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

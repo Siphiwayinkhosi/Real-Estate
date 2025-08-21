@@ -4,7 +4,7 @@ export const AchievementsSection = () => {
   const achievements = [
     { value: "500+", label: "Verkaufte Immobilien" },
     { value: "98%", label: "Kundenzufriedenheit" },
-    { value: "15+", label: "Jahre Erfahrung" },
+    { value: "30+", label: "Jahre Erfahrung" },
     { value: "€50M+", label: "Gesamtverkaufswert" },
   ];
 

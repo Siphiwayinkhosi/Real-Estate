@@ -3,7 +3,7 @@ import { Award, Clock, Users, Shield } from "lucide-react";
 
 export const WhyChooseUsSection = () => {
   const reasons = [
-    { icon: Award, title: "15+ Jahre Erfahrung", description: "Nachweisliche Erfolge im deutschen Immobilienmarkt" },
+    { icon: Award, title: "30+ Jahre Erfahrung", description: "Nachweisliche Erfolge im deutschen Immobilienmarkt" },
     { icon: Clock, title: "24/7 Unterstützung", description: "Immer erreichbar, wenn Sie uns am meisten brauchen" },
     { icon: Users, title: "Expertenteam", description: "Zertifizierte Fachkräfte mit Kenntnis des lokalen Marktes" },
     { icon: Shield, title: "Vertrauenswürdiger Service", description: "98% Kundenzufriedenheit und stetig steigend" },

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { TeamSection } from "@/components/about/TeamSection";
-import { TimelineSection } from "@/components/about/TimelineSection";
+
 import { MissionSection } from "@/components/about/MissionSection";
 import { AchievementsSection } from "@/components/about/AchievementsSection";
 
@@ -27,7 +27,7 @@ const AboutUs = () => {
         {/* Sections */}
         <MissionSection />
         <AchievementsSection />
-        <TimelineSection />
+        
         <TeamSection />
       </div>
     </div>
