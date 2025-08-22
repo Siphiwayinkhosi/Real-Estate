@@ -11,7 +11,7 @@ export const StatsSection = () => {
   const stats = [
     { value: 500, label: "Verkaufle Immobilien", suffix: "+" },
     { value: 72, label: "Stunden bis zu ihrer immobilien Bewertung", },
-    { value: 15, label: "Jahre Erfahrung", suffix: "+" },
+    { value: 30, label: "Jahre Erfahrung", suffix: "+" },
     { value: 1, label: "Ansprechparterin",  },
   ];
 

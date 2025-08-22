@@ -69,8 +69,8 @@ export const CTASection = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg">Rufen Sie uns an</h3>
-                  <p className="text-primary-foreground/80">+49 123 456 7890</p>
-                  <p className="text-sm text-primary-foreground/70">Mo-Fr 9:00-18:00</p>
+                  <p className="text-primary-foreground/80">+49 2174 785 796</p>
+                  <p className="text-sm text-primary-foreground/70">Mo-Fr 08:00-20:00</p>
                 </div>
               </div>
             </div>

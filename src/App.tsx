@@ -10,6 +10,7 @@ import FindRealEstate from "./pages/FindRealEstate";
 import AboutUs from "./pages/AboutUs";
 import OurServices from "./pages/OurServices";
 import Contact from "./pages/Contact";
+import { PropertyEvaluation } from "./pages/PropertyEvaluation";
 
 const queryClient = new QueryClient();
 
@@ -23,7 +24,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/find-real-estate" element={<FindRealEstate />} />
-            
+            <Route  path="/property-evaluation" element={<PropertyEvaluation />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/our-services" element={<OurServices />} />
             <Route path="/contact" element={<Contact />} />

@@ -15,7 +15,7 @@ export const ContactInfo = () => {
           </div>
           <div>
             <h3 className="font-semibold">Telefon</h3>
-            <p className="text-muted-foreground">+49 123 456 7890</p>
+            <p className="text-muted-foreground">+49 2174 785 796</p>
           </div>
         </div>
       </div>
@@ -40,7 +40,7 @@ export const ContactInfo = () => {
           <div>
             <h3 className="font-semibold">Adresse</h3>
             <p className="text-muted-foreground">
-              Musterstraße 123<br />12345 Berlin, Deutschland
+              Höhestr. 23<br />51399 Burscheid
             </p>
           </div>
         </div>
@@ -54,7 +54,7 @@ export const ContactInfo = () => {
           <div>
             <h3 className="font-semibold">Bürozeiten</h3>
             <p className="text-muted-foreground">
-              Mo-Fr: 09:00-18:00<br />Sa: 10:00-16:00
+              Mo-Fr: 08:00-20:00<br />Sa: 09:00-18:00
             </p>
           </div>
         </div>

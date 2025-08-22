@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Menu, X, Home, Search, Users, Settings, Phone } from "lucide-react";
+import { Menu, X, Home, Search, Users, Settings, Phone, ClipboardCheck } from "lucide-react";
 import logo from "/logo.png";
 
 export const Navbar = () => {
@@ -20,9 +20,11 @@ export const Navbar = () => {
   const navItems = [
     { name: "Home", path: "/", icon: Home },
     { name: "Immobilien Finden", path: "/find-real-estate", icon: Search },
+     { name: "Immobilienbewertung", path: "/property-evaluation", icon: ClipboardCheck }, // mobile icon only
     { name: "Über Uns", path: "/about-us", icon: Users },
     { name: "Unsere Dienstleistungen", path: "/our-services", icon: Settings },
     { name: "Kontakt", path: "/contact", icon: Phone },
+   
   ];
 
   return (
@@ -44,7 +46,7 @@ export const Navbar = () => {
             />
           </Link>
 
-          {/* Centered Navigation (from md up) */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex flex-1 justify-center items-center gap-x-8">
             {navItems.map((item) => {
               const isActive = location.pathname === item.path;

@@ -30,9 +30,9 @@ export const MissionSection = () => {
           <div className="bg-primary/10 rounded-full p-4 w-fit mx-auto mb-6">
             <Eye className="h-8 w-8 text-primary" />
           </div>
-          <h3 className="text-2xl font-bold mb-4">Unsere Vision</h3>
+          <h3 className="text-2xl font-bold mb-4">Unser Ansatz</h3>
           <p className="text-muted-foreground">
-            Deutschlands vertrauenswürdigster Immobilienpartner sein, bekannt für Integrität, Fachkompetenz und exzellenten Kundenservice.
+            Bei Kintscher Immobilien stehen Sie im Mittelpunkt. Unser Ansatz beruht auf einer ganzheitlichen und maßgeschneiderten Betreuung, die Ihre individuellen Bedürfnisse und Wünsche berücksichtigt.
           </p>
         </motion.div>
 
@@ -48,7 +48,7 @@ export const MissionSection = () => {
           </div>
           <h3 className="text-2xl font-bold mb-4">Unsere Werte</h3>
           <p className="text-muted-foreground">
-            Integrität, Transparenz und Engagement, unseren Kunden dabei zu helfen, ihr perfektes Zuhause oder ihre ideale Investitionsmöglichkeit zu finden.
+            Ehrlichkeit, Wertschätzung, Verantwortung, Professionalität und soziales Engagement bilden das Fundament unserer täglichen Arbeit bei Kintscher Immobilien.
           </p>
         </motion.div>
       </div>
