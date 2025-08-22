@@ -6,16 +6,14 @@ import heroBackground from "@/assets/hero-bg.jpg";
 
 export const HeroSection = () => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background with slow zoom */}
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroBackground})` }}
         animate={{ scale: [1, 1.1] }}
         transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80"></div>
-      </motion.div>
+      />
 
       {/* Main Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
@@ -31,15 +29,16 @@ export const HeroSection = () => {
             </span>
           </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="mt-6 text-lg md:text-xl text-white/80 max-w-xl mx-auto"
-          >
-            Und das seit über 30 Jahren.<br /> Ihr Immobilienmakler im
-            Rheinisch-Bergischen Kreis.<br /> Mit Herz & Kompetenz
-          </motion.p>
+        <motion.p
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.3 }}
+  className="mt-6 text-lg md:text-xl text-white max-w-xl mx-auto"
+>
+  Und das seit über 30 Jahren.<br /> Ihr Immobilienmakler im
+  Rheinisch-Bergischen Kreis.<br /> Mit Herz & Kompetenz
+</motion.p>
+
 
           {/* CTA Buttons */}
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
@@ -68,4 +67,5 @@ export const HeroSection = () => {
     </div>
   );
 };
+
 
