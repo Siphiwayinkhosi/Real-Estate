@@ -18,7 +18,7 @@ export const HeroSection = () => {
       {/* Main Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         {/* Text background for readability */}
-        <div className="inline-block bg-black/5 backdrop-blur-sm p-6 rounded-xl">
+        <div className="inline-block bg-black/20 backdrop-blur-sm p-6 rounded-xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
