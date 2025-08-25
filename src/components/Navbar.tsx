@@ -7,24 +7,35 @@ import logo from "/logo.png";
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+    
+    const handleResize = () => {
+      setIsTablet(window.innerWidth >= 768 && window.innerWidth < 1024);
+    };
+    
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Initial check
+    
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const navItems = [
     { name: "Home", path: "/", icon: Home },
     { name: "Immobilien Finden", path: "/find-real-estate", icon: Search },
-     { name: "Immobilienbewertung", path: "/property-evaluation", icon: ClipboardCheck }, // mobile icon only
+    { name: "Immobilienbewertung", path: "/property-evaluation", icon: ClipboardCheck },
     { name: "Über Uns", path: "/about-us", icon: Users },
     { name: "Unsere Dienstleistungen", path: "/our-services", icon: Settings },
     { name: "Kontakt", path: "/contact", icon: Phone },
-   
   ];
 
   return (
@@ -38,39 +49,43 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center flex-shrink-0">
             <img
               src={logo}
               alt="Kintscher Immobilien"
-              className="h-12 w-auto"
+              className="h-10 md:h-12 w-auto"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex flex-1 justify-center items-center gap-x-8">
-            {navItems.map((item) => {
-              const isActive = location.pathname === item.path;
-              return (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className={`relative px-3 py-2 rounded-lg transition-all duration-300 hover:bg-primary/10 ${
-                    isActive
-                      ? "text-primary font-semibold"
-                      : "text-foreground hover:text-primary"
-                  }`}
-                >
-                  {isActive && (
-                    <motion.div
-                      layoutId="activeTab"
-                      className="absolute inset-0 bg-primary/10 rounded-lg"
-                      transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                    />
-                  )}
-                  <span className="relative z-10">{item.name}</span>
-                </Link>
-              );
-            })}
+          <div className="hidden md:flex flex-1 justify-center items-center">
+            <div className={`flex ${isTablet ? "gap-x-4" : "gap-x-6"} flex-wrap justify-center`}>
+              {navItems.map((item) => {
+                const isActive = location.pathname === item.path;
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.path}
+                    className={`relative px-2 py-2 rounded-lg transition-all duration-300 hover:bg-primary/10 ${
+                      isActive
+                        ? "text-primary font-semibold"
+                        : "text-foreground hover:text-primary"
+                    } ${isTablet ? "text-sm" : "text-base"}`}
+                  >
+                    {isActive && (
+                      <motion.div
+                        layoutId="activeTab"
+                        className="absolute inset-0 bg-primary/10 rounded-lg"
+                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                      />
+                    )}
+                    <span className="relative z-10 whitespace-nowrap">
+                      {isTablet ? item.name.split(' ')[0] : item.name}
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
           </div>
 
           {/* Mobile menu button */}
