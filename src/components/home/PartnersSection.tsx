@@ -43,7 +43,7 @@ export const PartnersSection = () => {
           className="text-center mb-12"
         >
           <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
-            Vertrauenswürdige <span className="text-primary">Partner</span>
+            Unsere <span className="text-primary">Partner</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Wir arbeiten mit führenden Finanzinstituten Deutschlands zusammen, 

@@ -65,7 +65,7 @@ export const TestimonialsSection = () => {
             Was unsere <span className="text-primary">Kunden sagen</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Hören Sie nicht nur auf unser Wort. Hier berichten unsere zufriedenen Kunden von ihren Erfahrungen mit uns.
+             Hier berichten unsere zufriedenen Kunden von ihren Erfahrungen mit uns.
           </p>
         </motion.div>
 
