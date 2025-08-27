@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Real Estate Professional Design System with Green Theme */
+/* Real Estate Professional Design System with Custom Green Theme (#448243) */
 
 @layer base {
   :root {
@@ -15,27 +15,27 @@
     --popover: 0 0% 100%;
     --popover-foreground: 210 30% 8%;
 
-    /* Green theme for real estate */
-    --primary: 142 45% 25%;
+    /* Custom Green Theme (#448243) */
+    --primary: 139 31% 38%; /* #448243 in HSL */
     --primary-foreground: 0 0% 98%;
-    --primary-light: 142 45% 35%;
-    --primary-dark: 142 50% 15%;
+    --primary-light: 139 31% 48%;
+    --primary-dark: 139 31% 28%;
 
-    --secondary: 142 20% 96%;
-    --secondary-foreground: 142 45% 25%;
+    --secondary: 139 20% 96%;
+    --secondary-foreground: 139 31% 38%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 142 30% 92%;
-    --accent-foreground: 142 45% 25%;
+    --accent: 139 30% 92%;
+    --accent-foreground: 139 31% 38%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 142 45% 25%;
+    --ring: 139 31% 38%;
 
     /* Custom gradients and effects */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
@@ -73,10 +73,10 @@
     --popover: 210 25% 12%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 142 45% 35%;
+    --primary: 139 31% 38%; /* #448243 */
     --primary-foreground: 0 0% 98%;
-    --primary-light: 142 45% 45%;
-    --primary-dark: 142 50% 25%;
+    --primary-light: 139 31% 48%;
+    --primary-dark: 139 31% 28%;
 
     --secondary: 210 25% 15%;
     --secondary-foreground: 0 0% 95%;
@@ -85,14 +85,14 @@
     --muted-foreground: 215 20.2% 65.1%;
 
     --accent: 210 25% 18%;
-    --accent-foreground: 142 45% 35%;
+    --accent-foreground: 139 31% 38%;
 
     --destructive: 0 62.8% 50%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 210 25% 18%;
     --input: 210 25% 18%;
-    --ring: 142 45% 35%;
+    --ring: 139 31% 38%;
     
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.9), hsl(var(--primary-dark) / 0.9));

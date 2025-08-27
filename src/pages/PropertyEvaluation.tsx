@@ -14,10 +14,12 @@ export const PropertyEvaluation = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold text-black mb-4">
-            Ihr qualifizierter <span className="text-green-600">Immobilienmakler</span> vor Ort
+            Ihr qualifizierter{" "}
+            <span className="text-[#448243]">Immobilienmakler</span> vor Ort
           </h2>
           <p className="text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto">
-            Sie möchten Ihre Immobilie verkaufen? Kintscher Immobilien ist Ihr verlässlicher Partner in Burscheid und im gesamten Rheinisch-Bergischen Kreis.
+            Sie möchten Ihre Immobilie verkaufen? Kintscher Immobilien ist Ihr
+            verlässlicher Partner in Burscheid und im gesamten Rheinisch-Bergischen Kreis.
           </p>
         </motion.div>
 
@@ -33,9 +35,9 @@ export const PropertyEvaluation = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="bg-green-50 border-l-4 border-green-600 p-6 rounded-xl shadow-md flex flex-col items-center text-center"
+            className="bg-[#f2f7f3] border-l-4 border-[#448243] p-6 rounded-xl shadow-md flex flex-col items-center text-center"
           >
-            <Building2 size={40} className="text-green-600 mb-4" />
+            <Building2 size={40} className="text-[#448243] mb-4" />
             <h3 className="text-xl font-semibold mb-2">Immobilienbewertung</h3>
             <p className="text-gray-700">
               Nehmen Sie direkt online Kontakt auf oder übermitteln Sie uns die Eckdaten Ihrer Immobilie.
@@ -46,9 +48,9 @@ export const PropertyEvaluation = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="bg-green-50 border-l-4 border-green-600 p-6 rounded-xl shadow-md flex flex-col items-center text-center"
+            className="bg-[#f2f7f3] border-l-4 border-[#448243] p-6 rounded-xl shadow-md flex flex-col items-center text-center"
           >
-            <Clipboard size={40} className="text-green-600 mb-4" />
+            <Clipboard size={40} className="text-[#448243] mb-4" />
             <h3 className="text-xl font-semibold mb-2">Erfahrung & Know-how</h3>
             <p className="text-gray-700">
               Profitieren Sie dabei von über 30+ Jahren Erfahrung im regionalen Immobilienmarkt und unserem umfassenden Know-how im Immobilienhandel.
@@ -59,9 +61,9 @@ export const PropertyEvaluation = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="bg-green-50 border-l-4 border-green-600 p-6 rounded-xl shadow-md flex flex-col items-center text-center"
+            className="bg-[#f2f7f3] border-l-4 border-[#448243] p-6 rounded-xl shadow-md flex flex-col items-center text-center"
           >
-            <CheckCircle size={40} className="text-green-600 mb-4" />
+            <CheckCircle size={40} className="text-[#448243] mb-4" />
             <h3 className="text-xl font-semibold mb-2">Professionelle Betreuung</h3>
             <p className="text-gray-700">
               Unser Team sorgt für eine professionelle Immobilienbewertung und unterstützt Sie bei allen Schritten des Verkaufsprozesses.
@@ -75,16 +77,20 @@ export const PropertyEvaluation = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="bg-green-600 text-white rounded-2xl p-10 text-center shadow-lg"
+          className="bg-[#448243] text-white rounded-2xl p-10 text-center shadow-lg"
         >
           <Home size={50} className="mx-auto mb-4" />
-          <h3 className="text-2xl sm:text-3xl font-bold mb-2">Jetzt Immobilienbewertung starten</h3>
+          <h3 className="text-2xl sm:text-3xl font-bold mb-2">
+            Jetzt Immobilienbewertung starten
+          </h3>
           <p className="text-lg sm:text-xl">
-            Übermitteln Sie uns die Eckdaten Ihrer Immobilie und erhalten Sie eine professionelle, verlässliche Bewertung.
+            Übermitteln Sie uns die Eckdaten Ihrer Immobilie und erhalten Sie
+            eine professionelle, verlässliche Bewertung.
           </p>
         </motion.div>
       </div>
     </section>
   );
 };
+
 

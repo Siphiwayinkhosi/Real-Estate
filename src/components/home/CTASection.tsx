@@ -70,7 +70,9 @@ export const CTASection = () => {
                 <div>
                   <h3 className="font-semibold text-lg">Rufen Sie uns an</h3>
                   <p className="text-primary-foreground/80">+49 2174 785 796</p>
-                  <p className="text-sm text-primary-foreground/70">Mo-Fr 08:00-20:00</p>
+                  <p className="text-sm text-primary-foreground/70">Mo-Fr 08:00-20:00<br/>
+                  Sa:09-1700</p>
+                   <p className="text-primary-foreground/80 text-sm">Termine außerhalb der Geschäftszeiten auf Anfrage</p>
                 </div>
               </div>
             </div>

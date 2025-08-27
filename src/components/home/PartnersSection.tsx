@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 
 export const PartnersSection = () => {
   const partners = [
-    { name: "Deutsche Bank", logo: "/partner1.png" },
+    
     { name: "Sparkasse", logo: "/partner2.png" },
     { name: "Commerzbank", logo: "/partner3.png" },
     { name: "ING", logo: "/partner4.png" },

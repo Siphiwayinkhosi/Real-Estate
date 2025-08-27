@@ -44,7 +44,7 @@ export const HeroSection = () => {
               <Link to="/find-real-estate">
                 <Button
                   size="lg"
-                  className="bg-green-500 hover:bg-green-400 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:scale-105 transition-transform"
+                  className="bg-[#448243] hover:bg-green-400 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:scale-105 transition-transform"
                 >
                   Immobilien entdecken
                   <ArrowRight className="ml-2 h-5 w-5" />

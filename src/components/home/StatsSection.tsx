@@ -9,7 +9,7 @@ export const StatsSection = () => {
   });
 
   const stats = [
-    { value: 500, label: "Verkaufle Immobilien", suffix: "+" },
+    { value: 500, label: "Verkaufte Immobilien", suffix: "+" },
     { value: 72, label: "Stunden bis zu ihrer immobilien Bewertung", },
     { value: 30, label: "Jahre Erfahrung", suffix: "+" },
     { value: 1, label: "Ansprechparterin",  },
@@ -28,7 +28,7 @@ export const StatsSection = () => {
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           Verwurzelt in Burscheid, engagiert im gesamten Rheinisch-Bergischen Land-Von Odenthal 
-          uber Wermelskirchen und Opladen bis nach Leichlinglen und Lervekusen. Hier sind wir
+          uber Wermelskirchen und Opladen bis nach Leichlingen und Leverkusen. Hier sind wir
           Zuhause, hier kennen wir den Immobilienmarkt.</p>
         </motion.div>
 
