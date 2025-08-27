@@ -55,7 +55,7 @@ export const HeroSection = () => {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 text-lg font-semibold rounded-xl bg-white/10 backdrop-blur-sm transition-all hover:scale-105"
+                  className="border-white text-white hover:bg-white hover:text-[#448243] px-8 py-4 text-lg font-semibold rounded-xl bg-white/10 backdrop-blur-sm transition-all hover:scale-105"
                 >
                   Jetzt Beratung anfragen
                 </Button>
