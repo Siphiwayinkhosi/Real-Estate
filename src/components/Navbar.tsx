@@ -1,28 +1,25 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Menu, X, Home, Search, Users, Settings, Phone, ClipboardCheck } from "lucide-react";
+import { Menu, X, Home, Search, Users, Settings, Phone, ClipboardCheck, ChevronDown } from "lucide-react";
 import logo from "/logo.png";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    
-    const handleResize = () => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    const handleResize = () =>
       setIsTablet(window.innerWidth >= 768 && window.innerWidth < 1024);
-    };
-    
+
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
-    handleResize(); // Initial check
-    
+    handleResize();
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
@@ -31,11 +28,20 @@ export const Navbar = () => {
 
   const navItems = [
     { name: "Home", path: "/", icon: Home },
-    { name: "Immobilien Finden", path: "/find-real-estate", icon: Search },
+    { name: "Immobilien Finden", path: "/find-real-estate", icon: Search, dropdown: true },
     { name: "Immobilienbewertung", path: "/property-evaluation", icon: ClipboardCheck },
     { name: "Über Uns", path: "/about-us", icon: Users },
     { name: "Unsere Dienstleistungen", path: "/our-services", icon: Settings },
     { name: "Kontakt", path: "/contact", icon: Phone },
+  ];
+
+  const cities = [
+    { name: "Opladen", path: "/opladen" },
+    { name: "Leichlingen", path: "/leichlingen" },
+    { name: "Leverkusen", path: "/leverkusen" },
+    { name: "Odenthal", path: "/odenthal" },
+    { name: "Wermelskirchen", path: "/wermelskirchen" },
+    { name: "Burscheid", path: "/burscheid" },
   ];
 
   return (
@@ -62,6 +68,40 @@ export const Navbar = () => {
             <div className={`flex ${isTablet ? "gap-x-4" : "gap-x-6"} flex-wrap justify-center`}>
               {navItems.map((item) => {
                 const isActive = location.pathname === item.path;
+
+                if (item.dropdown) {
+                  return (
+                    <div key={item.name} className="relative">
+                      <button
+                        onClick={() => setDropdownOpen(!dropdownOpen)}
+                        className={`flex items-center gap-1 px-2 py-2 rounded-lg transition-all duration-300 hover:bg-primary/10 ${
+                          isActive
+                            ? "text-primary font-semibold"
+                            : "text-foreground hover:text-primary"
+                        } ${isTablet ? "text-sm" : "text-base"}`}
+                      >
+                        {item.name}
+                        <ChevronDown size={16} />
+                      </button>
+
+                      {dropdownOpen && (
+                        <div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg z-50">
+                          {cities.map((city) => (
+                            <Link
+                              key={city.name}
+                              to={city.path}
+                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary"
+                              onClick={() => setDropdownOpen(false)}
+                            >
+                              {city.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+
                 return (
                   <Link
                     key={item.name}
@@ -80,7 +120,7 @@ export const Navbar = () => {
                       />
                     )}
                     <span className="relative z-10 whitespace-nowrap">
-                      {isTablet ? item.name.split(' ')[0] : item.name}
+                      {isTablet ? item.name.split(" ")[0] : item.name}
                     </span>
                   </Link>
                 );
@@ -111,6 +151,41 @@ export const Navbar = () => {
             {navItems.map((item) => {
               const isActive = location.pathname === item.path;
               const Icon = item.icon;
+
+              if (item.dropdown) {
+                return (
+                  <div key={item.name} className="px-4">
+                    <button
+                      onClick={() => setDropdownOpen(!dropdownOpen)}
+                      className="flex items-center justify-between w-full py-3 rounded-lg text-foreground hover:bg-primary/10 hover:text-primary"
+                    >
+                      <span className="flex items-center space-x-3">
+                        <Icon size={20} />
+                        <span>{item.name}</span>
+                      </span>
+                      <ChevronDown size={16} />
+                    </button>
+                    {dropdownOpen && (
+                      <div className="mt-2 space-y-1">
+                        {cities.map((city) => (
+                          <Link
+                            key={city.name}
+                            to={city.path}
+                            className="block px-6 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary rounded-md"
+                            onClick={() => {
+                              setDropdownOpen(false);
+                              setIsOpen(false);
+                            }}
+                          >
+                            {city.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
               return (
                 <Link
                   key={item.name}
