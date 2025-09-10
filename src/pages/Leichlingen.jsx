@@ -160,7 +160,7 @@ const Leichlingen = () => {
             ))}
           </motion.ul>
           <motion.button
-            className="bg-white text-lg font-bold py-4 px-10 rounded-full shadow-lg transition-all duration-300 transform"
+            className="bg-white text-lg font-bold py-4 px-10 rounded-full shadow-lg transition-all duration-300 transform mt-8"
             style={{ color: brandColor, borderColor: brandColor, borderWidth: '2px' }}
             whileHover={{ scale: 1.05, boxShadow: "0 8px 16px rgba(68, 130, 67, 0.2)" }}
             whileTap={{ scale: 0.95 }}
