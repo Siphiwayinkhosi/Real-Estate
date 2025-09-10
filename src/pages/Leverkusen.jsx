@@ -118,20 +118,20 @@ const Leverkusen = () => {
             <p className="text-lg text-gray-600 mb-6">
               Leverkusen ist als Industriestadt bekannt, doch dieses Image wandelt sich schnell. Viertel wie das neue City C, Projekte in Wiesdorf und die Modernisierung der Innenstadt zeigen, dass Leverkusen zunehmend auf Lebensqualität setzt.
             </p>
-            <ul className="space-y-4 text-gray-700">
-              <li className="flex items-start">
-                <FaStar size={24} className="mr-3 mt-1" style={{ color: brandColor }} />
-                <span>Vielfältige Arbeits- und Freizeitmöglichkeiten für jeden Lebensstil.</span>
-              </li>
-              <li className="flex items-start">
-                <FaCity size={24} className="mr-3 mt-1" style={{ color: brandColor }} />
-                <span>Gleichzeitig werden historische Gebäude wie die Villa Römer, Wilhelminische Villen in Schlebusch und alte Bayer-Werkswohnanlagen als identitätsstiftende Architektur erhalten.</span>
-              </li>
-              <li className="flex items-start">
-                <FaPlane size={24} className="mr-3 mt-1" style={{ color: brandColor }} />
-                <span>Die Anbindung an die Flughäfen Köln/Bonn und Düsseldorf ist sehr gut.</span>
-              </li>
-            </ul>
+           <ul className="space-y-4 text-gray-700">
+  <li className="flex items-start">
+    <FaStar size={24} className="mt-1" style={{ color: brandColor }} />
+    <span style={{ marginLeft: '1rem' }}>Vielfältige Arbeits- und Freizeitmöglichkeiten für jeden Lebensstil.</span>
+  </li>
+  <li className="flex items-start">
+    <span style={{ transform: 'scale(1.2)', transformOrigin: 'top left' }}><FaCity size={24} className="mt-1" style={{ color: brandColor }} /></span>
+    <span style={{ marginLeft: '1rem' }}>Gleichzeitig werden historische Gebäude wie die Villa Römer, Wilhelminische Villen in Schlebusch und alte Bayer-Werkswohnanlagen als identitätsstiftende Architektur erhalten.</span>
+  </li>
+  <li className="flex items-start">
+    <FaPlane size={24} className="mt-1" style={{ color: brandColor }} />
+    <span style={{ marginLeft: '1rem' }}>Die Anbindung an die Flughäfen Köln/Bonn und Düsseldorf ist sehr gut.</span>
+  </li>
+</ul>
           </motion.div>
 
           <motion.div className="rounded-xl overflow-hidden shadow-xl" variants={imageSectionVariants}>

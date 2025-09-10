@@ -132,19 +132,19 @@ const Burscheid = () => {
               Burscheid ist als Standort für Familien und Pendler ideal. Die attraktiven Immobilienpreise und die ruhige Umgebung machen die Stadt zu einem begehrten Wohnort.
             </p>
             <ul className="space-y-4 text-gray-700">
-              <li className="flex items-start">
-                <FaCar size={24} className="mr-3 mt-1" style={{ color: brandColor }} />
-                <span>Direkt an der A1 gelegen, nur wenige Minuten von Leverkusen oder Köln entfernt, was ein problemloses Pendeln ermöglicht.</span>
-              </li>
-              <li className="flex items-start">
-                <FaLeaf size={24} className="mr-3 mt-1" style={{ color: brandColor }} />
-                <span>Wälder, Rad- und Wanderwege machen Burscheid ideal für Familien und Naturliebhaber.</span>
-              </li>
-              <li className="flex items-start">
-                <FaUsers size={24} className="mr-3 mt-1" style={{ color: brandColor }} />
-                <span>Wesentliche Einrichtungen wie Schulen, Kindergärten, Einkaufsmöglichkeiten und medizinische Versorgung sind vor Ort verfügbar.</span>
-              </li>
-            </ul>
+  <li className="flex items-start">
+    <FaCar size={24} className="mt-1" style={{ color: brandColor }} />
+    <span style={{ marginLeft: '1rem' }}>Direkt an der A1 gelegen, nur wenige Minuten von Leverkusen oder Köln entfernt, was ein problemloses Pendeln ermöglicht.</span>
+  </li>
+  <li className="flex items-start">
+    <FaLeaf size={24} className="mt-1" style={{ color: brandColor }} />
+    <span style={{ marginLeft: '1rem' }}>Wälder, Rad- und Wanderwege machen Burscheid ideal für Familien und Naturliebhaber.</span>
+  </li>
+  <li className="flex items-start">
+    <FaUsers size={24} className="mt-1" style={{ color: brandColor }} />
+    <span style={{ marginLeft: '1rem' }}>Wesentliche Einrichtungen wie Schulen, Kindergärten, Einkaufsmöglichkeiten und medizinische Versorgung sind vor Ort verfügbar.</span>
+  </li>
+</ul>
           </motion.div>
 
           <motion.div className="rounded-xl overflow-hidden shadow-xl" variants={imageVariants}>

@@ -136,20 +136,20 @@ const Opladen = () => {
             <p className="text-lg text-gray-600 mb-6">
               Opladen, ein traditionsreicher Stadtteil von Leverkusen, ist derzeit eines der spannendsten Entwicklungsgebiete der Region. Das Projekt <strong>"Neue Bahnstadt Opladen"</strong> verwandelt ein ganzes Quartier. Alte Industriehallen werden zu Kultur-, Wohn- und Arbeitszwecken umgenutzt und schaffen so ein lebendiges, modernes Zentrum.
             </p>
-            <ul className="space-y-4 text-gray-700">
-              <li className="flex items-start">
-                <FaMapMarkerAlt size={24} className="mr-3 mt-1" style={{ color: brandColor }} />
-                <span>Moderne Fuß- und Radwegbrücken verbinden die Stadtteile, und alte Bahngleise werden in öffentliche Plätze umgewandelt.</span>
-              </li>
-              <li className="flex items-start">
-                <FaUsers size={24} className="mr-3 mt-1" style={{ color: brandColor }} />
-                <span>Opladen ist kulturell lebendig: Stadtfeste, Konzerte und Märkte beleben das Zentrum.</span>
-              </li>
-              <li className="flex items-start">
-                <FaTrain size={24} className="mr-3 mt-1" style={{ color: brandColor }} />
-                <span>Ausgezeichnete Verkehrsanbindung an das gesamte Rheinland.</span>
-              </li>
-            </ul>
+     <ul className="space-y-4 text-gray-700">
+  <li className="flex items-start">
+    <FaMapMarkerAlt size={24} className="mt-1" style={{ color: brandColor }} />
+    <span style={{ marginLeft: '1rem' }}>Moderne Fuß- und Radwegbrücken verbinden die Stadtteile, und alte Bahngleise werden in öffentliche Plätze umgewandelt.</span>
+  </li>
+  <li className="flex items-start">
+    <FaUsers size={24} className="mt-1" style={{ color: brandColor }} />
+    <span style={{ marginLeft: '1rem' }}>Opladen ist kulturell lebendig: Stadtfeste, Konzerte und Märkte beleben das Zentrum.</span>
+  </li>
+  <li className="flex items-start">
+    <FaTrain size={24} className="mt-1" style={{ color: brandColor }} />
+    <span style={{ marginLeft: '1rem' }}>Ausgezeichnete Verkehrsanbindung an das gesamte Rheinland.</span>
+  </li>
+</ul>
           </motion.div>
 
           <motion.div className="rounded-xl overflow-hidden shadow-xl" variants={imageVariants}>

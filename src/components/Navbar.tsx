@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence  } from "framer-motion";
 import { Menu, X, Home, Search, Users, Settings, Phone, ClipboardCheck, ChevronDown } from "lucide-react";
 import logo from "/logo.png";
 
@@ -68,36 +68,59 @@ export const Navbar = () => {
             <div className={`flex ${isTablet ? "gap-x-4" : "gap-x-6"} flex-wrap justify-center`}>
               {navItems.map((item) => {
                 const isActive = location.pathname === item.path;
+                const isDropdownActive = item.dropdown && cities.some(city => location.pathname === city.path);
 
                 if (item.dropdown) {
                   return (
-                    <div key={item.name} className="relative">
-                      <button
-                        onClick={() => setDropdownOpen(!dropdownOpen)}
+                    <div
+                      key={item.name}
+                      className="relative"
+                      onMouseEnter={() => setDropdownOpen(true)}
+                      onMouseLeave={() => setDropdownOpen(false)}
+                    >
+                      <Link
+                        to={item.path}
                         className={`flex items-center gap-1 px-2 py-2 rounded-lg transition-all duration-300 hover:bg-primary/10 ${
-                          isActive
+                          isActive || isDropdownActive
                             ? "text-primary font-semibold"
                             : "text-foreground hover:text-primary"
                         } ${isTablet ? "text-sm" : "text-base"}`}
                       >
-                        {item.name}
-                        <ChevronDown size={16} />
-                      </button>
+                        <span className="relative z-10 whitespace-nowrap flex items-center gap-1">
+                          {item.name}
+                          <ChevronDown size={16} className={`transition-transform duration-300 ${dropdownOpen ? 'rotate-180' : ''}`} />
+                        </span>
+                        {(isActive || isDropdownActive) && (
+                          <motion.div
+                            layoutId="activeTab"
+                            className="absolute inset-0 bg-primary/10 rounded-lg"
+                            transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                          />
+                        )}
+                      </Link>
 
-                      {dropdownOpen && (
-                        <div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg z-50">
-                          {cities.map((city) => (
-                            <Link
-                              key={city.name}
-                              to={city.path}
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary"
-                              onClick={() => setDropdownOpen(false)}
-                            >
-                              {city.name}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
+                      <AnimatePresence>
+                        {dropdownOpen && (
+                          <motion.div
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10 }}
+                            transition={{ duration: 0.2 }}
+                            className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg z-50 overflow-hidden"
+                          >
+                            {cities.map((city) => (
+                              <Link
+                                key={city.name}
+                                to={city.path}
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary"
+                                onClick={() => setDropdownOpen(false)}
+                              >
+                                {city.name}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </div>
                   );
                 }
@@ -163,7 +186,7 @@ export const Navbar = () => {
                         <Icon size={20} />
                         <span>{item.name}</span>
                       </span>
-                      <ChevronDown size={16} />
+                      <ChevronDown size={16} className={`transition-transform duration-300 ${dropdownOpen ? 'rotate-180' : ''}`} />
                     </button>
                     {dropdownOpen && (
                       <div className="mt-2 space-y-1">

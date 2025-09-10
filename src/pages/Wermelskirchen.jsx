@@ -134,20 +134,20 @@ const Wermelskirchen = () => {
             <p className="text-lg text-gray-600 mb-6">
               Wermelskirchen ist als familienfreundlicher Ort bekannt und überzeugt durch seine zentrale Lage. Hier verbinden sich die Ruhe der Natur mit der Nähe zu den Metropolen.
             </p>
-            <ul className="space-y-4 text-gray-700">
-              <li className="flex items-start">
-                <FaMapPin size={24} className="mr-3 mt-1" style={{ color: brandColor }} />
-                <span>Günstig gelegen zwischen Köln, Düsseldorf und dem Ruhrgebiet.</span>
-              </li>
-              <li className="flex items-start">
-                <FaBriefcase size={24} className="mr-3 mt-1" style={{ color: brandColor }} />
-                <span>Ein florierender Mittelstand sorgt für attraktive Arbeitsplätze.</span>
-              </li>
-              <li className="flex items-start">
-                <FaUsers size={24} className="mr-3 mt-1" style={{ color: brandColor }} />
-                <span>Zahlreiche Schulen, Sportvereine und Freizeitangebote für alle Altersgruppen.</span>
-              </li>
-            </ul>
+           <ul className="space-y-4 text-gray-700">
+  <li className="flex items-start">
+    <FaMapPin size={24} className="mt-1" style={{ color: brandColor }} />
+    <span style={{ marginLeft: '1rem' }}>Günstig gelegen zwischen Köln, Düsseldorf und dem Ruhrgebiet.</span>
+  </li>
+  <li className="flex items-start">
+    <FaBriefcase size={24} className="mt-1" style={{ color: brandColor }} />
+    <span style={{ marginLeft: '1rem' }}>Ein florierender Mittelstand sorgt für attraktive Arbeitsplätze.</span>
+  </li>
+  <li className="flex items-start">
+    <FaUsers size={24} className="mt-1" style={{ color: brandColor }} />
+    <span style={{ marginLeft: '1rem' }}>Zahlreiche Schulen, Sportvereine und Freizeitangebote für alle Altersgruppen.</span>
+  </li>
+</ul>
           </motion.div>
 
           <motion.div className="rounded-xl overflow-hidden shadow-xl" variants={imageVariants}>

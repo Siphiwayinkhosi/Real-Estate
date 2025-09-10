@@ -136,20 +136,20 @@ const Leichlingen = () => {
             <p className="text-lg text-gray-600 mb-6">
               Leichlingen bietet eine Mischung aus modernen Neubauten und bergischer Tradition. Idyllische Fachwerkhäuser finden Sie entlang der Wupper, während neue Wohnkomplexe mit Balkonen und Dachterrassen im Stadtzentrum liegen.
             </p>
-            <ul className="space-y-4 text-gray-700">
-              <li className="flex items-start">
-                <FaTree size={24} className="mr-3 mt-1" style={{ color: brandColor }} />
-                <span>Die Natur prägt den Alltag: Spaziergänge entlang der Wupper, Radwege durch Felder und kleine Cafés am Flussufer.</span>
-              </li>
-              <li className="flex items-start">
-                <FaTrain size={24} className="mr-3 mt-1" style={{ color: brandColor }} />
-                <span>Gleichzeitig sind die Metropolen Köln, Leverkusen und Düsseldorf schnell erreichbar.</span>
-              </li>
-              <li className="flex items-start">
-                <FaLeaf size={24} className="mr-3 mt-1" style={{ color: brandColor }} />
-                <span>Grüne Landschaften, Obstgärten und die Wupper machen den Ort besonders lebenswert.</span>
-              </li>
-            </ul>
+          <ul className="space-y-4 text-gray-700">
+  <li className="flex items-start">
+    <FaTree size={24} className="mt-1" style={{ color: brandColor }} />
+    <span style={{ marginLeft: '1rem' }}>Die Natur prägt den Alltag: Spaziergänge entlang der Wupper, Radwege durch Felder und kleine Cafés am Flussufer.</span>
+  </li>
+  <li className="flex items-start">
+    <FaTrain size={24} className="mt-1" style={{ color: brandColor }} />
+    <span style={{ marginLeft: '1rem' }}>Gleichzeitig sind die Metropolen Köln, Leverkusen und Düsseldorf schnell erreichbar.</span>
+  </li>
+  <li className="flex items-start">
+    <FaLeaf size={24} className="mt-1" style={{ color: brandColor }} />
+    <span style={{ marginLeft: '1rem' }}>Grüne Landschaften, Obstgärten und die Wupper machen den Ort besonders lebenswert.</span>
+  </li>
+</ul>
           </motion.div>
 
           <motion.div className="rounded-xl overflow-hidden shadow-xl" variants={imageVariants}>

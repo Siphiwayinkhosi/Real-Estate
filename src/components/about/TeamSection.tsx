@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export const TeamSection = () => {
   const team = [
-    { name: "Anka Nett", role: "Buchhaltung", image: "/team1.png" },
+    { name: "Melanie", role: "Geschäftsführer", image: "/founder.png" },
     { name: "Anna Kappertz", role: "Back Office", image: "/team3.png" },
     { name: "Peter Kintscher", role: "Immobilienmakler", image: "/team2.png" },
   ];
@@ -23,7 +23,8 @@ export const TeamSection = () => {
             <img
               src={member.image}
               alt={member.name}
-              className="w-72 h-72 rounded-lg mx-auto mb-6 object-cover"
+              // Added 'object-top' to prioritize the top part of the image
+              className="w-72 h-72 rounded-lg mx-auto mb-6 object-cover object-top"
             />
             <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
             <p className="text-muted-foreground">{member.role}</p>

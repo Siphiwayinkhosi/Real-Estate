@@ -126,20 +126,20 @@ const Odenthal = () => {
             <p className="text-lg text-gray-600 mb-6">
               Odenthal ist ein Juwel im Bergischen Land, geprägt durch den ikonischen Altenberger Dom, ein gotisches Meisterwerk aus dem 13. Jahrhundert. Dieses kulturelle Zentrum bietet Konzerte, Märkte und Führungen und ist das Herz der Region.
             </p>
-            <ul className="space-y-4 text-gray-700">
-              <li className="flex items-start">
-                <FaChurch size={24} className="mr-3 mt-1" style={{ color: iconColor }} />
-                <span>Die Altenberger Kulturlandschaft lädt zum Entspannen ein, mit Wanderwegen, dem Dhünn-Stausee und weitläufigen Wäldern.</span>
-              </li>
-              <li className="flex items-start">
-                <FaTheaterMasks size={24} className="mr-3 mt-1" style={{ color: iconColor }} />
-                <span>Odenthal hat starke kulturelle Wurzeln: das Märchenfestival und Konzerte im Altenberger Dom ziehen Familien und Kulturinteressierte von weit her an.</span>
-              </li>
-              <li className="flex items-start">
-                <FaHiking size={24} className="mr-3 mt-1" style={{ color: iconColor }} />
-                <span>Hier vereinen sich Ruhe, Kultur und Natur in perfekter Harmonie.</span>
-              </li>
-            </ul>
+          <ul className="space-y-4 text-gray-700">
+  <li className="flex items-start">
+    <FaChurch size={24} className="mt-1" style={{ color: iconColor }} />
+    <span style={{ marginLeft: '1rem' }}>Die Altenberger Kulturlandschaft lädt zum Entspannen ein, mit Wanderwegen, dem Dhünn-Stausee und weitläufigen Wäldern.</span>
+  </li>
+  <li className="flex items-start">
+    <FaTheaterMasks size={24} className="mt-1" style={{ color: iconColor }} />
+    <span style={{ marginLeft: '1rem' }}>Odenthal hat starke kulturelle Wurzeln: das Märchenfestival und Konzerte im Altenberger Dom ziehen Familien und Kulturinteressierte von weit her an.</span>
+  </li>
+  <li className="flex items-start">
+    <FaHiking size={24} className="mt-1" style={{ color: iconColor }} />
+    <span style={{ marginLeft: '1rem' }}>Hier vereinen sich Ruhe, Kultur und Natur in perfekter Harmonie.</span>
+  </li>
+</ul>
           </motion.div>
 
           <motion.div className="rounded-xl overflow-hidden shadow-xl" variants={imageVariants}>

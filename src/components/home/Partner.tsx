@@ -76,7 +76,7 @@ const Partner = () => {
   className="inline-flex items-center gap-2 bg-[#448243] text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-green-700 transition-colors"
 >
   <Phone className="h-5 w-5" />
-  Jetzt Beratung anfragen
+  Jetzt Anrufen
 </a>
 
 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
