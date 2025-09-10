@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { FaHome, FaTree, FaBus, FaChurch, FaBuilding, FaKey, FaHandshake, FaHiking, FaTheaterMasks } from 'react-icons/fa';
 
 const headingColor = '#000000';
@@ -36,20 +36,50 @@ const sliderImages = [
 
 const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(1);
 
   useEffect(() => {
     const interval = setInterval(() => {
+      setDirection(1); // Set direction to 1 for forward slide
       setCurrentIndex(prev => (prev + 1) % sliderImages.length);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
 
+  const slideVariants = {
+    enter: (direction) => ({
+      x: direction > 0 ? '100%' : '-100%',
+    }),
+    center: {
+      x: 0,
+      transition: {
+        x: { type: "tween", duration: 1.5, ease: "easeInOut" },
+      },
+    },
+    exit: (direction) => ({
+      x: direction > 0 ? '-100%' : '100%',
+      transition: {
+        x: { type: "tween", duration: 1.5, ease: "easeInOut" },
+      },
+    }),
+  };
+
   return (
-    <img
-      src={sliderImages[currentIndex].src}
-      alt={sliderImages[currentIndex].alt}
-      className="w-full h-96 object-cover transition-all duration-700 ease-in-out rounded-xl"
-    />
+    <div className="relative w-full h-96 overflow-hidden rounded-xl">
+      <AnimatePresence initial={false} custom={direction}>
+        <motion.img
+          key={currentIndex}
+          src={sliderImages[currentIndex].src}
+          alt={sliderImages[currentIndex].alt}
+          className="absolute inset-0 w-full h-full object-cover"
+          custom={direction}
+          variants={slideVariants}
+          initial="enter"
+          animate="center"
+          exit="exit"
+        />
+      </AnimatePresence>
+    </div>
   );
 };
 
@@ -190,5 +220,3 @@ const Odenthal = () => {
 };
 
 export default Odenthal;
-
-
