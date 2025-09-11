@@ -32,8 +32,11 @@ export const Navbar = () => {
     { name: "Immobilienbewertung", path: "/property-evaluation", icon: ClipboardCheck },
     { name: "Über Uns", path: "/about-us", icon: Users },
     { name: "Unsere Dienstleistungen", path: "/our-services", icon: Settings },
+    { name: "Unsere Region", path: "/find-real-estate", icon: Search, dropdown: true },
     { name: "Kontakt", path: "/contact", icon: Phone },
-      { name: "Unsere Region", path: "/find-real-estate", icon: Search, dropdown: true },
+    
+   
+     
   ];
 
   const cities = [
