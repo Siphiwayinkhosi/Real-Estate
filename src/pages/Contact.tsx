@@ -12,9 +12,9 @@ const Contact = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Nehmen Sie <span className="text-primary">Kontakt auf</span>
-          </h1>
+        <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+  Nehmen Sie <span className="text-black">Kontakt auf</span>
+</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Sie möchten Ihre Traumimmobilie finden oder benötigen fachkundige Beratung im Immobilienbereich?
             Kontaktieren Sie uns noch heute und lassen Sie sich von unserem erfahrenen Team durch Ihre Immobilienreise begleiten.

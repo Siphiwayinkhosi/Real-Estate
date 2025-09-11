@@ -12,6 +12,11 @@ export const Navbar = () => {
   const location = useLocation();
 
   useEffect(() => {
+    // Scroll to the top of the page on route change
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     const handleResize = () =>
       setIsTablet(window.innerWidth >= 768 && window.innerWidth < 1024);
@@ -34,9 +39,6 @@ export const Navbar = () => {
     { name: "Unsere Dienstleistungen", path: "/our-services", icon: Settings },
     { name: "Unsere Region", path: "/find-real-estate", icon: Search, dropdown: true },
     { name: "Kontakt", path: "/contact", icon: Phone },
-    
-   
-     
   ];
 
   const cities = [

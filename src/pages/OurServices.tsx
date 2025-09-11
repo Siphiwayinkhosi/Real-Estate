@@ -13,8 +13,8 @@ const OurServices = () => {
           className="text-center mb-16"
         >
           <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Unsere <span className="text-primary">Dienstleistungen</span>
-          </h1>
+  Unsere <span className="text-black">Dienstleistungen</span>
+</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Umfassende Immobilienlösungen, individuell auf Ihre Bedürfnisse zugeschnitten. 
             Vom Kauf und Verkauf bis hin zur Immobilienverwaltung bieten wir fachkundige Beratung in jedem Schritt.

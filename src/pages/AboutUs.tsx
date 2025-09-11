@@ -14,9 +14,9 @@ const AboutUs = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Über <span className="text-primary">Kintscher Immobilien</span>
-          </h1>
+        <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+  Über <span className="text-black">Kintscher Immobilien</span>
+</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Mit über zwei Jahrzehnten Erfahrung auf dem deutschen Immobilienmarkt
             sind wir Ihr vertrauenswürdiger Partner für außergewöhnliche

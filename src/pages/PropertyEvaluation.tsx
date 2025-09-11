@@ -15,7 +15,7 @@ export const PropertyEvaluation = () => {
         >
           <h2 className="text-4xl font-bold text-black mb-4">
             Ihr qualifizierter{" "}
-            <span className="text-[#448243]">Immobilienmakler</span> vor Ort
+            <span className="text-black">Immobilienmakler</span> vor Ort
           </h2>
           <p className="text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto">
             Sie möchten Ihre Immobilie verkaufen? Kintscher Immobilien ist Ihr

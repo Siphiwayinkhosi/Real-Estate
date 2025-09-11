@@ -98,8 +98,8 @@ const FindRealEstate = () => {
           className="text-center mb-12"
         >
           <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Finde Dein Traum-<span className="text-primary">Immobilie</span>
-          </h1>
+  Finde Dein Traum-<span className="text-black">Immobilie</span>
+</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Entdecke außergewöhnliche Immobilien an den begehrtesten Standorten Deutschlands.
             Unsere sorgfältig ausgewählte Auswahl bietet Luxus, Komfort und Investitionspotenzial.
