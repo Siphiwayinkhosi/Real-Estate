@@ -28,11 +28,12 @@ export const Navbar = () => {
 
   const navItems = [
     { name: "Home", path: "/", icon: Home },
-    { name: "Immobilien Finden", path: "/find-real-estate", icon: Search, dropdown: true },
+  
     { name: "Immobilienbewertung", path: "/property-evaluation", icon: ClipboardCheck },
     { name: "Über Uns", path: "/about-us", icon: Users },
     { name: "Unsere Dienstleistungen", path: "/our-services", icon: Settings },
     { name: "Kontakt", path: "/contact", icon: Phone },
+      { name: "Orte", path: "/find-real-estate", icon: Search, dropdown: true },
   ];
 
   const cities = [

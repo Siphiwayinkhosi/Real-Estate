@@ -215,14 +215,13 @@ const Wermelskirchen = () => {
         <p className="text-lg text-gray-700 mb-6 max-w-2xl mx-auto">
           Starten Sie jetzt mit Kintscher Immobilien und finden Sie Ihr neues Zuhause im Bergischen Land.
         </p>
-        <motion.button
-          className="bg-white text-lg font-bold py-4 px-10 rounded-full shadow-lg transition-all duration-300 transform mb-3"
-          style={{ color: brandColor, borderColor: brandColor, borderWidth: '2px' }}
-          whileHover={{ scale: 1.05, boxShadow: "0 8px 16px rgba(68, 130, 67, 0.2)" }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Kontaktieren Sie uns jetzt!
-        </motion.button>
+<motion.button
+ className="inline-flex items-center gap-2 bg-[#448243] text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-green-700 transition-colors mb-4"
+>
+  Unsere Region
+</motion.button>
+ 
+
       </motion.div>
     </div>
   );

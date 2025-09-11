@@ -52,13 +52,13 @@ export const HeroSection = () => {
               </Link>
 
               <Link to="/contact">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-white text-white hover:bg-white hover:text-[#448243] px-8 py-4 text-lg font-semibold rounded-xl bg-white/10 backdrop-blur-sm transition-all hover:scale-105"
-                >
-                  Jetzt Beratung anfragen
-                </Button>
+               <motion.button
+  className="border-2 border-white text-white hover:bg-white hover:text-[#448243] px-8 py-4 text-lg font-semibold rounded-xl bg-white/10 backdrop-blur-sm transition-all duration-300 transform hover:scale-105"
+  whileTap={{ scale: 0.95 }}
+>
+  Unsere Region
+</motion.button>
+
               </Link>
             </div>
           </motion.div>

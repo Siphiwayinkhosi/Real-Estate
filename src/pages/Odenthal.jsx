@@ -207,12 +207,9 @@ const Odenthal = () => {
           Suchen Sie ein Haus oder eine Wohnung in Odenthal? Unser Team hilft Ihnen, Ihr perfektes Zuhause zu finden.
         </p>
         <motion.button
-          className="bg-white text-lg font-bold py-4 px-10 rounded-full shadow-lg transition-all duration-300 transform mb-3"
-          style={{ color: iconColor, borderColor: iconColor, borderWidth: '2px' }}
-          whileHover={{ scale: 1.05, boxShadow: "0 8px 16px rgba(68, 130, 67, 0.2)" }}
-          whileTap={{ scale: 0.95 }}
+          className="inline-flex items-center gap-2 bg-[#448243] text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-green-700 transition-colors mb-4"
         >
-          Kontaktieren Sie Kintscher Immobilien
+           Unsere Region
         </motion.button>
       </motion.div>
     </div>

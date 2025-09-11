@@ -73,7 +73,7 @@ const Partner = () => {
 
   <a
   href="tel:+492174785796"
-  className="inline-flex items-center gap-2 bg-[#448243] text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-green-700 transition-colors"
+className="inline-flex items-center gap-2 bg-[#448243] text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-green-700 transition-colors"
 >
   <Phone className="h-5 w-5" />
   Jetzt Anrufen

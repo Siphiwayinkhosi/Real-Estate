@@ -20,12 +20,23 @@ export const TeamSection = () => {
             transition={{ delay: index * 0.1 }}
             className="bg-card rounded-2xl p-6 shadow-soft text-center hover:shadow-medium transition-shadow"
           >
-            <img
-              src={member.image}
-              alt={member.name}
-              // Added 'object-top' to prioritize the top part of the image
-              className="w-72 h-72 rounded-lg mx-auto mb-6 object-cover object-top"
-            />
+            {/* Conditional application of the wrapper and negative margin */}
+            {index === 1 || index === 2 ? ( // Apply only to the second (index 1) and third (index 2) images
+              <div className="w-72 h-72 rounded-lg mx-auto mb-6 overflow-hidden">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full object-cover"
+                  style={{ marginTop: '-40px' }} // Adjust this value as needed
+                />
+              </div>
+            ) : ( // For the first image (index 0) and any others, render normally
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-72 h-72 rounded-lg mx-auto mb-6 object-cover object-top" // Original class for the first image
+              />
+            )}
             <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
             <p className="text-muted-foreground">{member.role}</p>
           </motion.div>
