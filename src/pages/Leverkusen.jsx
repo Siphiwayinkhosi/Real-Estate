@@ -198,7 +198,7 @@ const Leverkusen = () => {
         <motion.button
          className="inline-flex items-center gap-2 bg-[#448243] text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-green-700 transition-colors mb-4"
         >
-          Unsere Region
+         Jetzt kontaktieren
         </motion.button>
       </motion.div>
     </div>
